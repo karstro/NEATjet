@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Assertions;
+// using UnityEngine.Assertions;
 
 // public class SimulationVisualiser : Visualiser
 public class SimulationVisualiser : MonoBehaviour
@@ -10,93 +10,58 @@ public class SimulationVisualiser : MonoBehaviour
     protected GameObject Object;
     protected float time;
     private bool Play;
+    private string PlayString;
     private float PlaySpeed;
     private Simulator Sim;
     private State[] States;
 
-    private void InitializeSphereAt(Vector3 Pos, float Diameter, string Name) {
-        GameObject Sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        Sphere.transform.parent = this.Object.transform;
-        Sphere.transform.localPosition = Pos;
-        Sphere.transform.localScale = Diameter * Vector3.one;
-        Sphere.name = Name;
-    }
-
-    private void InitializeCylinderFromTo(Vector3 Start, Vector3 End, float Width, string Name) {
-        GameObject Cylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-        Cylinder.transform.parent = this.Object.transform;
-        Cylinder.transform.localPosition = (Start + End) / 2;
-        Vector3 StartToEnd = End - Start;
-        Cylinder.transform.localRotation = Quaternion.FromToRotation(Vector3.up, StartToEnd);
-        Cylinder.transform.localScale = new Vector3(Width, StartToEnd.magnitude / 2, Width);
-        Cylinder.name = Name;
-    }
-
-    private void InitializeJet(Creature c, int JetIndex) {
-        // Get the relative positions of the jet's start and end
-        (Vector3 JetStartPos, Vector3 JetEndPos) = c.GetJetStartAndEnd(JetIndex);
-        JetStartPos -= c.Position;
-        JetEndPos -= c.Position;
-        float JetWidth = 2 * c.JetRadius;
-        // Initialize the spheres at the jet's start and end
-        this.InitializeSphereAt(JetStartPos, JetWidth, "Jet" + JetIndex.ToString() + "Start");
-        this.InitializeSphereAt(JetEndPos, JetWidth, "Jet" + JetIndex.ToString() + "End");
-        // Initialize Cylinders from Center to jet's start to jet's end
-        this.InitializeCylinderFromTo(Vector3.zero, JetStartPos, JetWidth, "Jet" + JetIndex.ToString() + "Arm");
-        this.InitializeCylinderFromTo(JetStartPos, JetEndPos, JetWidth, "Jet" + JetIndex.ToString());
-    }
-
-    private void InitializeCreatureModel(Creature c) {
-        // initialize the GameObjects that will be used to visualize the creature's simulation in the scene
-        this.Object = new GameObject();
-        this.Object.transform.SetPositionAndRotation(c.Position, c.Rotation);
-        this.Object.name = "Creature";
-        for (int i = 0; i < c.Jets; i++) {
-            this.InitializeJet(c, i);
-        }
-        // replace body sphere with utah teapot. thanks i hate it.
-        this.InitializeSphereAt(Vector3.zero, 2 * c.Radius, "Body");
-    }
-
     // Start is called before the first frame update
+    // #TODO turn this into a constructor
     void Start() {
         // initialize the simulator and get the states from a simulation
         // this is temporary, eventually it should be given states from another source based on a simulation that happened, potentially before the visualizer existed
         this.Sim = gameObject.GetComponent<Simulator>();
+        // this creature shoulld be generated based on the first state of the array.
         Creature c = new Creature();
-        this.InitializeCreatureModel(c);
+        this.Object = CreatureModelBuilder.BuildCreatureModel(c, "Creature");
         this.States = this.Sim.simulateCreature(c);
 
         // initialize time related variables
         this.time = 0f;
         this.Play = true;
+        this.PlayString = "Pause";
         this.PlaySpeed = 1;
     }
 
-    // interpolate in between states from the States array based on this.time
-    private State GetInterpolatedState() {
+    private int FindStateBeforeTime() {
         // binary search algorithm, since time is ordered in the states array
         int low = 0;
         int high = this.States.Length - 2;
-        int result;
+        int result = 0;
 
         // if the target time is out of bounds, throw an error
-        Assert.IsFalse(this.time < this.States[low].time || this.time > this.States[high + 1].time,
-                       "Time variable is out of bounds of the States");
+        // Assert.IsFalse(this.time < this.States[low].time || this.time > this.States[high + 1].time,
+        //                "Time variable is out of bounds of the States");
+        
+        // if the target time is out of bounds, clamp it within bounds
+        this.time = Mathf.Clamp(this.time, this.States[low].time, this.States[high + 1].time);
 
         // keep count of iterations in case of endless looping
         int i = 0;
+        int MaxSearchIterations = 100;
         // while the search hasn't converged
         while (true) {
-            // calculate the middle of the search range
-            int mid = (low + high) / 2;
-            if (i > 30) {
-                result = 0;
-                Debug.Log("more than 20 iterations in search");
+            // check if search has gone on too long
+            if (i > MaxSearchIterations) {
+                Debug.Log("Could not find time " + this.time + "in States array.");
                 break;
             }
             i++;
+            
+            // calculate the middle of the search range
+            int mid = (low + high) / 2;
 
+            // check where the wanted time is relative to the middle of the range
             if (this.time < this.States[mid].time) {
                 // if this.time is below the middle range, restrict the search range to the lower half
                 high = mid - 1;
@@ -110,45 +75,67 @@ public class SimulationVisualiser : MonoBehaviour
             }
         }
 
+        return result;
+    }
+
+    // interpolate in between states from the States array based on this.time
+    private State GetInterpolatedState() {
+        // find where this.time is within the States array
+        int BeforeStateIndex = FindStateBeforeTime();
+
         // linearly interpolate between the two states around the result using this.time as the fraction.
-        State Before = this.States[result];
-        State After = this.States[result + 1];
-        float frac = Mathf.InverseLerp(Before.time, After.time, this.time);
-        Vector3 InterpolatedPosition = Vector3.Lerp(Before.Position, After.Position, frac);
-        Quaternion InterpolatedRotation = Quaternion.Slerp(Before.Rotation, After.Rotation, frac);
-        return new State(this.time, InterpolatedPosition, InterpolatedRotation);
+        State Before = this.States[BeforeStateIndex];
+        State After = this.States[BeforeStateIndex + 1];
+        return State.LerpByTime(Before, After, this.time);
     }
 
     // apply the given state to the GameObjects in the scene
     private void VisualiseState(State s) {
         this.Object.transform.SetPositionAndRotation(s.Position, s.Rotation);
+        // #TODO when state is expanded with more information about the creature,
+        // visualize that information as well.
     }
 
-    // Update is called once per frame
-    void Update() {
-        if (this.States != null && this.States.Length > 1) {
-            State InterpolatedState = this.GetInterpolatedState();
-            this.VisualiseState(InterpolatedState);
-            if (this.Play) {
-                this.time += Time.deltaTime * this.PlaySpeed;
-                if (this.time > this.States[this.States.Length - 1].time) {
-                    this.time = this.States[this.States.Length - 1].time;
-                }
+    // if the simulation is playing, automatically incement the time
+    private void UpdateTimeWhenPlaying() {
+        if (this.Play) {
+            this.time += Time.deltaTime * this.PlaySpeed;
+            // if time would go over the upper bound, set it back to the upper bound
+            if (this.time > this.States[this.States.Length - 1].time) {
+                this.time = this.States[this.States.Length - 1].time;
             }
         }
     }
 
+    // Update is called once per frame
+    void Update() {
+        // if the visualizer has states
+        if (this.States != null && this.States.Length > 1) {
+            State InterpolatedState = this.GetInterpolatedState();
+            this.VisualiseState(InterpolatedState);
+            this.UpdateTimeWhenPlaying();
+        }
+    }
+
     void OnGUI() {
+        // determine where on the screen the UI should be shown
         float SliderWidth = Screen.width * 2 / 3;
         float SliderHeight = 30;
         float x = (Screen.width - SliderWidth) / 2;
         float y = Screen.height - SliderHeight - 20;
+
+        // UI that shows and allows the user to change the time that the visualizer visualizes
         this.time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), this.time, 0f, this.Sim.TimeOut);
-        // this.time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), this.time, 0f, 15f);
-        // add play/pause button
-        float ButtonWidth = 40;
-        if (GUI.Button(new Rect(x - ButtonWidth - 10, y - SliderHeight / 3, ButtonWidth, SliderHeight), this.Play.ToString())) {
+
+        // a button that toggles whether the visualizer will automatically play.
+        float ButtonWidth = 50;
+        if (GUI.Button(new Rect(x - ButtonWidth - 10, y - SliderHeight / 3, ButtonWidth, SliderHeight), PlayString)) {
             this.Play = !this.Play;
+            if (this.Play) {
+                this.PlayString = "Pause";
+            } else {
+                this.PlayString = "Play";
+            }
         }
     }
 }
