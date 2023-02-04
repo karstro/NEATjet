@@ -21,7 +21,8 @@ public class TestVisualiser : MonoBehaviour
         for (int i = 0; i < this.Object.transform.childCount - 1; i++) {
             Transform Child = this.Object.transform.GetChild(i);
             int JetIndex = (int) i / 2;
-            Vector3 JetPosition = i % 2 == 0 ? this.c.GetJetStart(JetIndex) : this.c.GetJetEnd(JetIndex);
+            (Vector3 JetStartPos, Vector3 JetEndPos) = c.GetJetStartAndEnd(JetIndex);
+            Vector3 JetPosition = i % 2 == 0 ? JetStartPos : JetEndPos;
             Child.localPosition = JetPosition - this.c.Position;
         }
     }

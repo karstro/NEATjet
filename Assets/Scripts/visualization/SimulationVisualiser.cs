@@ -4,7 +4,7 @@ using UnityEngine;
 // using UnityEngine.Assertions;
 
 // public class SimulationVisualiser : Visualiser
-public class SimulationVisualiser : MonoBehaviour
+public class SimulationVisualiser
 {
     
     protected GameObject Object;
@@ -12,19 +12,20 @@ public class SimulationVisualiser : MonoBehaviour
     private bool Play;
     private string PlayString;
     private float PlaySpeed;
-    private Simulator Sim;
+    // private Simulator Sim;
     private State[] States;
 
     // Start is called before the first frame update
     // #TODO turn this into a constructor
-    void Start() {
+    public SimulationVisualiser(State[] States, Creature Original, string name) {
         // initialize the simulator and get the states from a simulation
         // this is temporary, eventually it should be given states from another source based on a simulation that happened, potentially before the visualizer existed
-        this.Sim = gameObject.GetComponent<Simulator>();
-        // this creature shoulld be generated based on the first state of the array.
-        Creature c = new Creature();
-        this.Object = CreatureModelBuilder.BuildCreatureModel(c, "Creature");
-        this.States = this.Sim.simulateCreature(c);
+        // this.Sim = gameObject.GetComponent<Simulator>();
+        // this creature is generated based on the first state of the array.
+        Creature c = new Creature(States[0], Original);
+        this.Object = CreatureModelBuilder.BuildCreatureModel(c, name);
+        // this.States = this.Sim.simulateCreature(c);
+        this.States = States;
 
         // initialize time related variables
         this.time = 0f;
@@ -32,7 +33,21 @@ public class SimulationVisualiser : MonoBehaviour
         this.PlayString = "Pause";
         this.PlaySpeed = 1;
     }
+    // public void Initialize(State[] States, Creature Original, string name) {
+    //     // initialize the simulator and get the states from a simulation
+    //     // this creature is generated based on the first state of the array.
+    //     Creature c = new Creature(States[0], Original);
+    //     this.Object = CreatureModelBuilder.BuildCreatureModel(c, name);
+    //     this.States = States;
 
+    //     // initialize time related variables
+    //     this.time = 0f;
+    //     this.Play = true;
+    //     this.PlayString = "Pause";
+    //     this.PlaySpeed = 1;
+    // }
+
+    // Find the index of the state before the current time
     private int FindStateBeforeTime() {
         // binary search algorithm, since time is ordered in the states array
         int low = 0;
@@ -108,7 +123,7 @@ public class SimulationVisualiser : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    public void Update() {
         // if the visualizer has states
         if (this.States != null && this.States.Length > 1) {
             State InterpolatedState = this.GetInterpolatedState();
@@ -117,7 +132,7 @@ public class SimulationVisualiser : MonoBehaviour
         }
     }
 
-    void OnGUI() {
+    public void OnGUI() {
         // determine where on the screen the UI should be shown
         float SliderWidth = Screen.width * 2 / 3;
         float SliderHeight = 30;
@@ -125,7 +140,8 @@ public class SimulationVisualiser : MonoBehaviour
         float y = Screen.height - SliderHeight - 20;
 
         // UI that shows and allows the user to change the time that the visualizer visualizes
-        this.time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), this.time, 0f, this.Sim.TimeOut);
+        float TimeOut = States[States.Length - 1].time;
+        this.time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), this.time, 0f, TimeOut);
 
         // a button that toggles whether the visualizer will automatically play.
         float ButtonWidth = 50;

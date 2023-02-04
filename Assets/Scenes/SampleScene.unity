@@ -326,9 +326,8 @@ GameObject:
   - component: {fileID: 1503233995}
   - component: {fileID: 1503233994}
   - component: {fileID: 1503233993}
-  - component: {fileID: 1503233998}
+  - component: {fileID: 1503234002}
   - component: {fileID: 1503233999}
-  - component: {fileID: 1503233997}
   - component: {fileID: 1503234000}
   m_Layer: 0
   m_Name: Plane
@@ -416,36 +415,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1503233997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503233992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72e1d33591bae4e4ab6aed1025499df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1503233998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503233992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d449b1b75dfbf4d45969d94768b85f45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  g: 0.981
-  StepsPerSecond: 60
-  TimeOut: 15
-  DragCoeff: 0
-  FrictionCoeff: 0
-  Elasticity: 0.8
 --- !u!114 &1503233999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,6 +439,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08b8fb984818bf46bdacc3897dc70cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1503234002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503233992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad71bf57223418a4194b4b5ab94153bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GenerationSize: 1
 --- !u!850595691 &1580216002
 LightingSettings:
   m_ObjectHideFlags: 0

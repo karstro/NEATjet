@@ -51,10 +51,11 @@ public class CreatureModelBuilder
     // Build the GameObjects that will be used to visualize the creature's simulation in the scene
     public static GameObject BuildCreatureModel(Creature c, string name) {
         // create the parent object
-        GameObject Object = new GameObject();
+        // GameObject Object = new GameObject();
+        GameObject Object = c.GetGameObject();
 
         // set the parent object's properties
-        Object.transform.SetPositionAndRotation(c.Position, c.Rotation);
+        // Object.transform.SetPositionAndRotation(c.Position, c.Rotation);
         Object.name = name;
 
         // build each jet and the body
