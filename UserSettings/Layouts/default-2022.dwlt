@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 9
-    y: 51
-    width: 1903
-    height: 1101
+    x: 0
+    y: 43
+    width: 1920
+    height: 1117
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,8 +43,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1903
-    height: 1051
+    width: 1920
+    height: 1067
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
@@ -64,10 +64,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1518
+    x: 1532
     y: 0
-    width: 385
-    height: 1051
+    width: 388
+    height: 1067
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
@@ -93,8 +93,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 376
-    height: 635
+    width: 379
+    height: 645
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -112,23 +112,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 635
-    width: 1518
-    height: 416
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 14}
+    y: 645
+    width: 1532
+    height: 422
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,8 +149,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1903
-    height: 1101
+    width: 1920
+    height: 1117
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1903
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1081
-    width: 1903
+    y: 1097
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -219,8 +219,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1518
-    height: 1051
+    width: 1532
+    height: 1067
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
@@ -244,8 +244,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1518
-    height: 635
+    width: 1532
+    height: 645
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -265,10 +265,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 376
+    x: 379
     y: 0
-    width: 1142
-    height: 635
+    width: 1153
+    height: 645
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
@@ -298,10 +298,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1527
-    y: 81
-    width: 384
-    height: 1030
+    x: 1532
+    y: 73
+    width: 387
+    height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -462,10 +462,10 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 1
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2023-01-25T16:03:10.641+01:00
+      updatedTimeString: 2023-02-04T22:43:47.036+01:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2023-01-25T16:03:10.632+01:00
+      updatedTimeString: 2023-02-04T22:43:47.054+01:00
       cacheType: 1
     currentBranch:
       name: main
@@ -496,9 +496,18 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
+        - 004ab5848ae46b345b11fe92eee16bf1
+        - 0718926c37f2dba4d87fd646619442d4
+        - 4b7643b024f7cd84b8625a7d3adefc2a
         - c77360c67b8d6de41b32a71e8394edb0
+        - 815daa00402173a4c8d653aa42a96423
+        - ad71bf57223418a4194b4b5ab94153bb
         - a77a6941648385440a81143c27389aaf
+        - 295df38e8ebc36d4eb959dabd3afa601
+        - fc8c41ae45b72934b8e30bbe08ba5350
         - d449b1b75dfbf4d45969d94768b85f45
+        - 08d7c301ba35108469e16eb99609de15
+        - 72e1d33591bae4e4ab6aed1025499df3
         values:
         - path: Assets
           label: Assets
@@ -518,9 +527,309 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
+        - path: Assets\Materials
+          label: Materials
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Materials\PhysicMaterials
+          label: PhysicMaterials
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+          label: PhysicsTest1.physicMaterial
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+            projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
         - path: Assets\Scripts
           label: Scripts
           level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Evolution
+          label: Evolution
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Evolution\Generation.cs
+          label: Generation.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Evolution\Generation.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
+            projectPath: Assets\Scripts\Evolution\Generation.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Simulation
+          label: Simulation
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Simulation\Creature.cs
+          label: Creature.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\Creature.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs
+            projectPath: Assets\Scripts\Simulation\Creature.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Simulation\SimulationRun.cs
+          label: SimulationRun.cs
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\SimulationRun.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs
+            projectPath: Assets\Scripts\Simulation\SimulationRun.cs
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scripts\Simulation\Simulator.cs
+          label: Simulator.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\Simulator.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
+            projectPath: Assets\Scripts\Simulation\Simulator.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\visualization
+          label: visualization
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\visualization\SimulationVisualiser.cs
+          label: SimulationVisualiser.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\visualization\SimulationVisualiser.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
+            projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+      folders:
+        keys:
+        - Assets
+        - Assets\Materials
+        - Assets\Materials\PhysicMaterials
+        - Assets\Scripts
+        - Assets\Scripts\Evolution
+        - Assets\Scripts\Simulation
+        - Assets\Scripts\visualization
+        - UserSettings
+        - UserSettings\Layouts
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Materials
+          label: Materials
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Materials\PhysicMaterials
+          label: PhysicMaterials
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Evolution
+          label: Evolution
+          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -554,70 +863,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Simulator.cs
-          label: Simulator.cs
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Simulator.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
-            projectPath: Assets\Scripts\Simulation\Simulator.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-      folders:
-        keys:
-        - Assets
-        - Assets\Scripts
-        - Assets\Scripts\Simulation
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation
-          label: Simulation
+        - path: Assets\Scripts\visualization
+          label: visualization
           level: 2
           isFolder: 1
           isContainer: 0
@@ -716,6 +963,114 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Materials.meta
+        label: Materials.meta
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials.meta
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials.meta
+          projectPath: Assets\Materials.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials
+        label: Materials
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Materials\PhysicMaterials.meta
+        label: PhysicMaterials.meta
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\PhysicMaterials.meta
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials.meta
+          projectPath: Assets\Materials\PhysicMaterials.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\PhysicMaterials
+        label: PhysicMaterials
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+        label: PhysicsTest1.physicMaterial
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+          projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
+        label: PhysicsTest1.physicMaterial.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
+          projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\Scripts
         label: Scripts
         level: 1
@@ -734,6 +1089,42 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Scripts\Evolution
+        label: Evolution
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Evolution\Generation.cs
+        label: Generation.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Evolution\Generation.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
+          projectPath: Assets\Scripts\Evolution\Generation.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: Assets\Scripts\Simulation
         label: Simulation
         level: 2
@@ -752,6 +1143,60 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets\Scripts\Simulation\Creature.cs
+        label: Creature.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\Creature.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs
+          projectPath: Assets\Scripts\Simulation\Creature.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Simulation\SimulationRun.cs
+        label: SimulationRun.cs
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\SimulationRun.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs
+          projectPath: Assets\Scripts\Simulation\SimulationRun.cs
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scripts\Simulation\SimulationRun.cs.meta
+        label: SimulationRun.cs.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\SimulationRun.cs.meta
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs.meta
+          projectPath: Assets\Scripts\Simulation\SimulationRun.cs.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
       - path: Assets\Scripts\Simulation\Simulator.cs
         label: Simulator.cs
         level: 3
@@ -767,6 +1212,42 @@ MonoBehaviour:
           path: Assets\Scripts\Simulation\Simulator.cs
           fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
           projectPath: Assets\Scripts\Simulation\Simulator.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\visualization
+        label: visualization
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\visualization\SimulationVisualiser.cs
+        label: SimulationVisualiser.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\visualization\SimulationVisualiser.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
+          projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -844,9 +1325,63 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
+    - path: Assets\Materials.meta
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials.meta
+      projectPath: Assets\Materials.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\PhysicMaterials.meta
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials.meta
+      projectPath: Assets\Materials\PhysicMaterials.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+      projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
+      projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Evolution\Generation.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
+      projectPath: Assets\Scripts\Evolution\Generation.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\Creature.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs
+      projectPath: Assets\Scripts\Simulation\Creature.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\SimulationRun.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs
+      projectPath: Assets\Scripts\Simulation\SimulationRun.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Simulation\SimulationRun.cs.meta
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs.meta
+      projectPath: Assets\Scripts\Simulation\SimulationRun.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
     - path: Assets\Scripts\Simulation\Simulator.cs
       fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
       projectPath: Assets\Scripts\Simulation\Simulator.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\visualization\SimulationVisualiser.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
+      projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
@@ -856,12 +1391,12 @@ MonoBehaviour:
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 2 changed files
+    changedFilesText: 11 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-02-02T15:51:10.693+01:00
+      updatedTimeString: 2023-02-05T13:49:58.016+01:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-02-02T15:52:12.871+01:00
+      updatedTimeString: 2023-02-05T14:31:29.278+01:00
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -2157,13 +2692,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-02-02T15:51:10.693+01:00
+    updatedTimeString: 2023-02-05T13:49:58.016+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-02-02T15:15:58.984+01:00
+    updatedTimeString: 2023-02-05T14:31:29.335+01:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-02-02T15:52:12.871+01:00
+    updatedTimeString: 2023-02-05T14:31:29.278+01:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2234,10 +2769,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 9
-    y: 716
-    width: 1517
-    height: 395
+    x: 0
+    y: 718
+    width: 1531
+    height: 401
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2255,22 +2790,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Visualization
+    - Assets/Scripts/Simulation
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Visualization
+  - Assets/Scripts/Simulation
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e04e0000
-    m_LastClickedID: 20192
-    m_ExpandedIDs: 00000000744e0000764e0000784e000000ca9a3bffffff7f
+    m_SelectedIDs: d84e0000
+    m_LastClickedID: 20184
+    m_ExpandedIDs: 00000000744e0000764e0000aa4e0000ae4e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2298,7 +2833,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000744e0000764e0000784e0000
+    m_ExpandedIDs: 00000000744e0000764e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2325,7 +2860,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2374,10 +2909,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1527
-    y: 81
-    width: 384
-    height: 1030
+    x: 1532
+    y: 73
+    width: 387
+    height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2415,10 +2950,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 9
-    y: 81
-    width: 375
-    height: 614
+    x: 0
+    y: 73
+    width: 378
+    height: 624
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2428,7 +2963,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 34fbffff
+      m_ExpandedIDs: 36fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2444,7 +2979,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -2472,10 +3007,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 385
-    y: 81
-    width: 1140
-    height: 614
+    x: 379
+    y: 73
+    width: 1151
+    height: 624
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2758,20 +3293,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.051431794, y: -0.863399, z: 0.08996565, w: 0.49390265}
+    m_Target: {x: 0.02158216, y: -0.9678898, z: 0.08911114, w: 0.23440449}
     speed: 2
-    m_Value: {x: 0.051428273, y: -0.86333996, z: 0.089959495, w: 0.49386886}
+    m_Value: {x: 0.021580406, y: -0.9678111, z: 0.0891039, w: 0.23438543}
   m_Size:
-    m_Target: 6.3324738
+    m_Target: 4.866915
     speed: 2
-    m_Value: 6.3324738
+    m_Value: 4.866915
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
   m_CameraSettings:
-    m_Speed: 1.0249
-    m_SpeedNormalized: 0.51
+    m_Speed: 1.0846
+    m_SpeedNormalized: 0.53999996
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -2809,10 +3344,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 385
-    y: 81
-    width: 1140
-    height: 614
+    x: 379
+    y: 73
+    width: 1151
+    height: 624
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2823,7 +3358,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1140, y: 593}
+  m_TargetSize: {x: 1151, y: 603}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -2843,10 +3378,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -570
-    m_HBaseRangeMax: 570
-    m_VBaseRangeMin: -296.5
-    m_VBaseRangeMax: 296.5
+    m_HBaseRangeMin: -575.5
+    m_HBaseRangeMax: 575.5
+    m_VBaseRangeMin: -301.5
+    m_VBaseRangeMax: 301.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -2864,23 +3399,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1140
-      height: 593
+      width: 1151
+      height: 603
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 570, y: 296.5}
+    m_Translation: {x: 575.5, y: 301.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -570
-      y: -296.5
-      width: 1140
-      height: 593
+      x: -575.5
+      y: -301.5
+      width: 1151
+      height: 603
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1140, y: 614}
+  m_LastWindowPixelSize: {x: 1151, y: 624}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2908,10 +3443,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 9
-    y: 716
-    width: 1517
-    height: 395
+    x: 0
+    y: 718
+    width: 1531
+    height: 401
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

@@ -19,14 +19,15 @@ public class Creature
             set => this.Object.transform.rotation = value; 
             get => this.Object.transform.rotation; 
         }
-    public Rigidbody PhysicsBody;
+    private Rigidbody PhysicsBody;
     private SphereCollider[] Colliders;
     public int Jets;
     private Vector3 JetArm;
     public Vector3[] JetAngles;
     private float JetLength;
     public float JetRadius;
-    public float[] Thrusts;
+    private float[] Thrusts;
+    private float MaxThrust;
 
     // #ToDO look into factory design pattern to reduce code size
     public Creature() {
@@ -34,7 +35,7 @@ public class Creature
         this.Object.transform.SetPositionAndRotation(new Vector3(0f, .75f, 0f), Quaternion.identity);
 
         this.PhysicsBody = this.Object.AddComponent<Rigidbody>();
-        this.PhysicsBody.mass = Random.Range(0.5f, 5f);
+        this.PhysicsBody.mass = 1f;
         this.PhysicsBody.velocity = new Vector3(0f, 0f, 0f);
         this.PhysicsBody.angularVelocity = 2 * Vector3.up;
         // this.Body.angularVelocity = Vector3.zero;

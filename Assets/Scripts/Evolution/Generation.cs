@@ -7,7 +7,7 @@ public class Generation : MonoBehaviour
     public int GenerationSize = 1;
     private Creature[] Creatures;
     private Simulator Sim;
-    private State[,] CreatureStates;
+    private SimulationRun[] Runs;
     private SimulationVisualiser Visualiser;
 
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class Generation : MonoBehaviour
     {
         this.GenerateCreatures();
         this.Sim = new Simulator(60, 15);
-        this.CreatureStates = this.Sim.SimulateCreatures(this.Creatures);
+        this.Runs = this.Sim.SimulateCreatures(this.Creatures);
         this.BeginCreatureVisualisation(0);
     }
 
@@ -27,14 +27,7 @@ public class Generation : MonoBehaviour
     }
 
     void BeginCreatureVisualisation(int CreatureIndex) {
-        int numSteps = this.CreatureStates.GetLength(1);
-        State[] states = new State[numSteps];
-        for (int step = 0; step < numSteps; step++) {
-            states[step] = this.CreatureStates[CreatureIndex, step];
-        }
-        // SimulationVisualiser visualiser = gameObject.AddComponent<SimulationVisualiser>();
-        // visualiser.Initialize(states, this.Creatures[CreatureIndex], "Creature");
-        this.Visualiser = new SimulationVisualiser(states, this.Creatures[CreatureIndex], "Creature");
+        this.Visualiser = new SimulationVisualiser(this.Runs[CreatureIndex], "Creature");
     }
 
     void Update() {
