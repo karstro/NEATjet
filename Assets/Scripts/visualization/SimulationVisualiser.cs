@@ -1,14 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// using UnityEngine.Assertions;
 
-// public class SimulationVisualiser : Visualiser
 public class SimulationVisualiser
 {
-    
-    protected GameObject Object;
-    protected float time;
+    private CreatureModel Model;
+    private float time;
     private bool Play;
     private string PlayString;
     private float PlaySpeed;
@@ -18,21 +15,17 @@ public class SimulationVisualiser
         // prepare to visualise the given run
         this.Run = run;
         Creature c = this.Run.GetCreatureAtStartOfRun();
-        this.Object = CreatureModelBuilder.BuildCreatureModel(c, name);
+        this.Model = CreatureModelBuilder.Build(c, name);
+        // this.Object = CreatureModelBuilder.BuildCreatureModel(c, name);
 
         // initialize time related variables
         this.time = 0f;
         this.Play = true;
         this.PlayString = "Pause";
-        this.PlaySpeed = 1;
-    }
+        this.PlaySpeed = 1f;
 
-
-    // apply the given state to the GameObjects in the scene
-    private void VisualiseState(State s) {
-        this.Object.transform.SetPositionAndRotation(s.Position, s.Rotation);
-        // #TODO when state is expanded with more information about the creature,
-        // visualize that information as well.
+        string s = this.Run.ToString();
+        System.IO.File.WriteAllText("WriteLine.txt", s);
     }
 
     // if the simulation is playing, automatically incement the time
@@ -48,9 +41,8 @@ public class SimulationVisualiser
 
     // Update is called once per frame
     public void Update() {
-        // if the visualizer has states
         State InterpolatedState = this.Run.GetStateAtExactTime(this.time);
-        this.VisualiseState(InterpolatedState);
+        this.Model.VisualiseState(InterpolatedState);
         this.UpdateTimeWhenPlaying();
     }
 

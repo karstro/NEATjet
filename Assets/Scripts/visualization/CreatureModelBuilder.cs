@@ -27,31 +27,28 @@ public class CreatureModelBuilder
     // build the model of the individual jet indicated by the jetIndex
     private static void BuildJet(Transform parent, Creature c, int JetIndex) {
         // Get the positions of the jet's start and end
-        (Vector3 JetStartPos, Vector3 JetEndPos) = c.GetJetStartAndEnd(JetIndex);
-        // turn them into the positions relative to the creature's origin
-        JetStartPos -= c.Position;
-        JetEndPos -= c.Position;
+        (Vector3 JetStartPos, Vector3 JetEndPos) = c.GetLocalJetStartAndEnd(JetIndex);
         float JetWidth = 2 * c.JetRadius;
         string JetName = "Jet" + JetIndex.ToString();
         // Build the spheres at the jet's start and end
-        CreatureModelBuilder.BuildSphereAt(parent, JetStartPos, JetWidth, JetName + "Start");
-        CreatureModelBuilder.BuildSphereAt(parent, JetEndPos, JetWidth, JetName + "End");
+        BuildSphereAt(parent, JetStartPos, JetWidth, JetName + "Start");
+        BuildSphereAt(parent, JetEndPos, JetWidth, JetName + "End");
         // Build Cylinders from Center to jet's start, then to jet's end
-        CreatureModelBuilder.BuildCylinderFromTo(parent, Vector3.zero, JetStartPos, JetWidth, JetName + "Arm");
-        CreatureModelBuilder.BuildCylinderFromTo(parent, JetStartPos, JetEndPos, JetWidth, JetName);
+        BuildCylinderFromTo(parent, Vector3.zero, JetStartPos, JetWidth, JetName + "Arm");
+        BuildCylinderFromTo(parent, JetStartPos, JetEndPos, JetWidth, JetName);
     }
 
     // build the central body of the creature
     private static void BuildBody(Transform parent, Creature c) {
         // #TODO replace body sphere with utah teapot. thanks i hate it.
         // body is currently just a sphere
-        CreatureModelBuilder.BuildSphereAt(parent, Vector3.zero, 2 * c.Radius, "Body");
+        BuildSphereAt(parent, Vector3.zero, 2 * c.Radius, "Body");
     }
 
     // Build the GameObjects that will be used to visualize the creature's simulation in the scene
-    public static GameObject BuildCreatureModel(Creature c, string name) {
-        // create the parent object
-        // GameObject Object = new GameObject();
+    public static CreatureModel Build(Creature c, string name) {
+        // get the parent object
+        CreatureModel model = new CreatureModel(c);
         GameObject Object = c.GetGameObject();
 
         // set the parent object's properties
@@ -60,11 +57,11 @@ public class CreatureModelBuilder
 
         // build each jet and the body
         for (int i = 0; i < c.Jets; i++) {
-            CreatureModelBuilder.BuildJet(Object.transform, c, i);
+            BuildJet(Object.transform, c, i);
         }
-        CreatureModelBuilder.BuildBody(Object.transform, c);
+        BuildBody(Object.transform, c);
 
         // Return the parent object that now contains all the elements of the creature model
-        return Object;
+        return model;
     }
 }
