@@ -117,8 +117,16 @@ public class SimulationRun
         return result;
     }
 
-    // returns a creature exactly like the simulated creature at the start of the run
+    // returns a new creature like the simulated creature at the start of the run
     public Creature GetCreatureAtStartOfRun() {
         return new Creature(this.States[0], this.C);
+    }
+
+    public override string ToString() {
+        string s = this.C.ToString() + "\n";
+        foreach (State state in this.States) {
+            s += state.ToString() + "\n";
+        }
+        return s;
     }
 }

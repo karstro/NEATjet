@@ -37,9 +37,9 @@ public class Simulator
         // run each step sequentially and save the state it ends up in
         for (int TimeStep = 1; TimeStep < Steps; TimeStep++) {
             float time = TimeStep * this.dt;
-            // #TODO:
-            // Creature[Index].UpdateIntent(time, other senses)
-            // Creature[Index].ApplyIntentForces()
+            foreach(Creature c in Creatures) {
+                c.Update(time, this.dt);
+            }
 
             // Unity simulates a physics step that is this.dt seconds long
             Physics.Simulate(this.dt);

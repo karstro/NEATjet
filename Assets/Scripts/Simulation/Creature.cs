@@ -5,11 +5,6 @@ using UnityEngine;
 public class Creature
 {
     public float Radius;
-    public float Mass;
-    // public Vector3 Position;
-    // public Vector3 Velocity;
-    // public Quaternion Rotation;
-    // public Vector3 Angular;
     private GameObject Object;
     public Vector3 Position {
             set => this.Object.transform.position = value; 
@@ -26,17 +21,19 @@ public class Creature
     public Vector3[] JetAngles;
     private float JetLength;
     public float JetRadius;
+    private float MaxJetAngleChangePerSecond;
     private float[] Thrusts;
-    private float MaxThrust;
+    private float ThrustToWeight;
+    private IBrain Brain;
 
-    // #ToDO look into factory design pattern to reduce code size
+    // #TODO look into builder design pattern to reduce code size
     public Creature() {
         this.Object = new GameObject();
         this.Object.transform.SetPositionAndRotation(new Vector3(0f, .75f, 0f), Quaternion.identity);
 
         this.PhysicsBody = this.Object.AddComponent<Rigidbody>();
         this.PhysicsBody.mass = 1f;
-        this.PhysicsBody.velocity = new Vector3(0f, 0f, 0f);
+        this.PhysicsBody.velocity = new Vector3(3f, 1f, 2f);
         this.PhysicsBody.angularVelocity = 2 * Vector3.up;
         // this.Body.angularVelocity = Vector3.zero;
 
@@ -47,6 +44,7 @@ public class Creature
         this.JetLength = 1f;
         this.JetRadius = 0.2f;
         this.JetArm = new Vector3(1f, 0.5f, 0f);
+        this.MaxJetAngleChangePerSecond = 30f;
 
         this.Colliders = new SphereCollider[2 * this.Jets + 1];
 
@@ -56,21 +54,27 @@ public class Creature
         this.Colliders[lastColliderIndex].center = Vector3.zero;
         this.Colliders[lastColliderIndex].radius = this.Radius;
         // #TODO make this actually load
-        // this.Colliders[lastColliderIndex].material = (PhysicMaterial)Resources.Load("Assets/Materials/PhysicMaterials/PhysicsTest1");
+        // PhysicMaterial material = (PhysicMaterial)Resources.Load("Assets/Materials/PhysicMaterials/PhysicsTest1")
+        // this.Colliders[lastColliderIndex].material = material;
 
         // Set the Colliders for the Jets
         for (int ColliderIndex = 0; ColliderIndex < lastColliderIndex; ColliderIndex++) {
             this.Colliders[ColliderIndex] = this.Object.AddComponent<SphereCollider>();
             this.Colliders[ColliderIndex].radius = this.JetRadius;
-            // this.Colliders[ColliderIndex].material = (PhysicMaterial)Resources.Load("Assets/Materials/PhysicMaterials/PhysicsTest1");
+            // this.Colliders[ColliderIndex].material = material;
         }
 
+        this.ThrustToWeight = 1f;
+        this.Thrusts = new float[this.Jets];
         this.JetAngles = new Vector3[this.Jets];
         for (int JetIndex = 0; JetIndex < this.Jets; JetIndex++) {
+            this.Thrusts[JetIndex] = 0f;
             this.SetJetAngle(JetIndex, Vector3.zero);
         }
         // change 1 angle to test if angle changing works
         this.SetJetAngle(0, new Vector3(0, 0, 90));
+
+        this.Brain = new StaticBrain();
     }
 
     // used for visualizing the results of a simulation
@@ -82,14 +86,13 @@ public class Creature
         this.Radius = c.Radius;
         this.Jets = c.Jets;
         this.JetArm = c.JetArm;
-
-        // get this from the state once the state stores this.
-        this.JetAngles = new Vector3[this.Jets];
-        for (int i = 0; i < this.Jets; i++) {
-            this.JetAngles[i] = c.JetAngles[i];
-        }
         this.JetLength = c.JetLength;
         this.JetRadius = c.JetRadius;
+
+        this.JetAngles = new Vector3[this.Jets];
+        for (int JetIndex = 0; JetIndex < this.Jets; JetIndex++) {
+            this.JetAngles[JetIndex] = state.JetAngles[JetIndex];
+        }
     }
 
     public GameObject GetGameObject() {
@@ -115,10 +118,30 @@ public class Creature
         return (JetStart, JetEnd);
     }
 
-    private void SetJetAngle(int JetIndex, Vector3 EulerAngles) {
-        this.JetAngles[JetIndex] = EulerAngles;
+    public void SetJetAngle(int JetIndex, Vector3 JetAngle) {
+        this.JetAngles[JetIndex] = JetAngle;
         (Vector3 JetStartPos, Vector3 JetEndPos) = this.GetLocalJetStartAndEnd(JetIndex);
-        this.Colliders[2 * JetIndex].center = JetStartPos;
-        this.Colliders[2 * JetIndex + 1].center = JetEndPos;
+        if (this.Colliders != null) {
+            this.Colliders[2 * JetIndex].center = JetStartPos;
+            this.Colliders[2 * JetIndex + 1].center = JetEndPos;
+        }
+    }
+
+    public void Update(float time, float deltaTime/*, Senses senses*/) {
+        // get the creature's intent from it's Brain
+        (Vector3[] jetAngleIntents, float[] thrustIntents) = this.Brain.GetIntent(time, this);
+        // update jetangles and the jets' colliders based on intent
+        this.UpdateJetAnglesByIntent(jetAngleIntents, deltaTime);
+        // update thrusts based on intent
+        // apply force based on thrusts
+    }
+
+    private void UpdateJetAnglesByIntent(Vector3[] jetAngleIntents, float deltaTime) {
+        // consider changing the maximum change to account for the total angle change instead of each angle change individually
+        float MaxJetAngleChange = deltaTime * this.MaxJetAngleChangePerSecond;
+        for (int JetIndex = 0; JetIndex < this.Jets; JetIndex++) {
+            Vector3 nextJetAngle = Vector3.MoveTowards(this.JetAngles[JetIndex], jetAngleIntents[JetIndex], MaxJetAngleChange);
+            this.SetJetAngle(JetIndex, nextJetAngle);
+        }
     }
 }
