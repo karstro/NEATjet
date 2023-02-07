@@ -9,36 +9,41 @@ public class Generation : MonoBehaviour
     private Simulator Sim;
     private SimulationRun[] Runs;
     private SimulationVisualiser Visualiser;
+    private CreatureBuilder CBuilder;
+    private CreatureDirector CDirector;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.GenerateCreatures();
-        this.Sim = new Simulator(60, 15);
-        this.Runs = this.Sim.SimulateCreatures(this.Creatures);
-        this.BeginCreatureVisualisation(0);
+        CBuilder = new CreatureBuilder();
+        CDirector = new CreatureDirector();
+        GenerateCreatures();
+        Sim = new Simulator(60, 15);
+        Runs = Sim.SimulateCreatures(Creatures);
+        BeginCreatureVisualisation(0);
     }
 
     void GenerateCreatures() {
-        this.Creatures = new Creature[this.GenerationSize];
-        for (int i = 0; i < this.GenerationSize; i++) {
-            this.Creatures[i] = new Creature();
+        Creatures = new Creature[GenerationSize];
+        for (int i = 0; i < GenerationSize; i++) {
+            CDirector.MakeSimpleCreature(CBuilder);
+            Creatures[i] = CBuilder.GetResult();
         }
     }
 
     void BeginCreatureVisualisation(int CreatureIndex) {
-        this.Visualiser = new SimulationVisualiser(this.Runs[CreatureIndex], "Creature");
+        Visualiser = new SimulationVisualiser(Runs[CreatureIndex], "Creature");
     }
 
     void Update() {
-        if (this.Visualiser != null) {
-            this.Visualiser.Update();
+        if (Visualiser != null) {
+            Visualiser.Update();
         }
     }
 
     void OnGUI() {
-        if (this.Visualiser != null) {
-            this.Visualiser.OnGUI();
+        if (Visualiser != null) {
+            Visualiser.OnGUI();
         }
     }
 }

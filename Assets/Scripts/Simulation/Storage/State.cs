@@ -21,9 +21,8 @@ public readonly struct State
         this.time = time;
         this.Position = c.Position;
         this.Rotation = c.Rotation;
-        // this.JetAngles = c.JetAngles;
-        this.JetAngles = new Vector3[c.Jets];
-        c.JetAngles.CopyTo(this.JetAngles, 0);
+        this.JetAngles = new Vector3[c._Jets];
+        c._JetAngles.CopyTo(this.JetAngles, 0);
     }
 
     public static State Lerp(State A, State B, float fraction) {

@@ -28,7 +28,7 @@ public class CreatureModelBuilder
     private static void BuildJet(Transform parent, Creature c, int JetIndex) {
         // Get the positions of the jet's start and end
         (Vector3 JetStartPos, Vector3 JetEndPos) = c.GetLocalJetStartAndEnd(JetIndex);
-        float JetWidth = 2 * c.JetRadius;
+        float JetWidth = 2 * c._JetRadius;
         string JetName = "Jet" + JetIndex.ToString();
         // Build the spheres at the jet's start and end
         BuildSphereAt(parent, JetStartPos, JetWidth, JetName + "Start");
@@ -42,21 +42,21 @@ public class CreatureModelBuilder
     private static void BuildBody(Transform parent, Creature c) {
         // #TODO replace body sphere with utah teapot. thanks i hate it.
         // body is currently just a sphere
-        BuildSphereAt(parent, Vector3.zero, 2 * c.Radius, "Body");
+        BuildSphereAt(parent, Vector3.zero, 2 * c._Radius, "Body");
     }
 
     // Build the GameObjects that will be used to visualize the creature's simulation in the scene
     public static CreatureModel Build(Creature c, string name) {
         // get the parent object
         CreatureModel model = new CreatureModel(c);
-        GameObject Object = c.GetGameObject();
+        GameObject Object = c._Object;
 
         // set the parent object's properties
         // Object.transform.SetPositionAndRotation(c.Position, c.Rotation);
         Object.name = name;
 
         // build each jet and the body
-        for (int i = 0; i < c.Jets; i++) {
+        for (int i = 0; i < c._Jets; i++) {
             BuildJet(Object.transform, c, i);
         }
         BuildBody(Object.transform, c);

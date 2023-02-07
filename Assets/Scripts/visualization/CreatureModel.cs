@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CreatureModel
 {
+    // #NOTE should CreatureModel inherit from Creature (or a new parent class) instead of containing one?
     private Creature C;
     private Transform ModelParent;
 
     public CreatureModel(Creature c) {
         this.C = c;
-        this.ModelParent = C.GetGameObject().transform;
+        this.ModelParent = C._Object.transform;
     }
 
     private void UpdateJet(int JetIndex) {
@@ -27,7 +28,7 @@ public class CreatureModel
     }
 
     private void UpdateJets(Vector3[] JetAngles) {
-        for(int JetIndex = 0; JetIndex < this.C.Jets; JetIndex++) {
+        for(int JetIndex = 0; JetIndex < this.C._Jets; JetIndex++) {
             this.C.SetJetAngle(JetIndex, JetAngles[JetIndex]);
             this.UpdateJet(JetIndex);
         }

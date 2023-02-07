@@ -5,9 +5,9 @@ using UnityEngine;
 public class StaticBrain : IBrain
 {
     public (Vector3[], float[]) GetIntent(float time, Creature c) {
-        Vector3[] jetAngles = new Vector3[c.Jets];
-        float[] thrusts = new float[c.Jets];
-        for (int JetIndex = 0; JetIndex < c.Jets; JetIndex++) {
+        Vector3[] jetAngles = new Vector3[c._Jets];
+        float[] thrusts = new float[c._Jets];
+        for (int JetIndex = 0; JetIndex < c._Jets; JetIndex++) {
             if (JetIndex % 2 == 0) {
                 jetAngles[JetIndex] = Vector3.zero;
             } else {

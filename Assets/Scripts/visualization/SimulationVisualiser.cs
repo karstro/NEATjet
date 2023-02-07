@@ -23,9 +23,6 @@ public class SimulationVisualiser
         this.Play = true;
         this.PlayString = "Pause";
         this.PlaySpeed = 1f;
-
-        string s = this.Run.ToString();
-        System.IO.File.WriteAllText("WriteLine.txt", s);
     }
 
     // if the simulation is playing, automatically incement the time
