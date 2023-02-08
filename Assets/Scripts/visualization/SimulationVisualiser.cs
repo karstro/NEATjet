@@ -13,34 +13,33 @@ public class SimulationVisualiser
 
     public SimulationVisualiser(SimulationRun run, string name) {
         // prepare to visualise the given run
-        this.Run = run;
-        Creature c = this.Run.GetCreatureAtStartOfRun();
-        this.Model = CreatureModelBuilder.Build(c, name);
-        // this.Object = CreatureModelBuilder.BuildCreatureModel(c, name);
+        Run = run;
+        Model = Run.GetCreatureModel();
+        // Object = CreatureModelBuilder.BuildCreatureModel(c, name);
 
         // initialize time related variables
-        this.time = 0f;
-        this.Play = true;
-        this.PlayString = "Pause";
-        this.PlaySpeed = 1f;
+        time = 0f;
+        Play = true;
+        PlayString = "Pause";
+        PlaySpeed = 1f;
     }
 
     // if the simulation is playing, automatically incement the time
     private void UpdateTimeWhenPlaying() {
-        if (this.Play) {
-            this.time += Time.deltaTime * this.PlaySpeed;
+        if (Play) {
+            time += Time.deltaTime * PlaySpeed;
             // if time would go over the upper bound, set it back to the upper bound
-            if (this.time > this.Run.ReadMaximumTime) {
-                this.time = this.Run.ReadMaximumTime;
+            if (time > Run._MaximumTime) {
+                time = Run._MaximumTime;
             }
         }
     }
 
     // Update is called once per frame
     public void Update() {
-        State InterpolatedState = this.Run.GetStateAtExactTime(this.time);
-        this.Model.VisualiseState(InterpolatedState);
-        this.UpdateTimeWhenPlaying();
+        State InterpolatedState = Run.GetStateAtExactTime(time);
+        Model.VisualiseState(InterpolatedState);
+        UpdateTimeWhenPlaying();
     }
 
     public void OnGUI() {
@@ -51,16 +50,16 @@ public class SimulationVisualiser
         float y = Screen.height - SliderHeight - 20;
 
         // UI that shows and allows the user to change the time that the visualizer visualizes
-        this.time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), this.time, 0f, this.Run.ReadMaximumTime);
+        time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), time, 0f, Run._MaximumTime);
 
         // a button that toggles whether the visualizer will automatically play.
         float ButtonWidth = 50;
         if (GUI.Button(new Rect(x - ButtonWidth - 10, y - SliderHeight / 3, ButtonWidth, SliderHeight), PlayString)) {
-            this.Play = !this.Play;
-            if (this.Play) {
-                this.PlayString = "Pause";
+            Play = !Play;
+            if (Play) {
+                PlayString = "Pause";
             } else {
-                this.PlayString = "Play";
+                PlayString = "Play";
             }
         }
     }

@@ -6,72 +6,73 @@ using UnityEngine;
 public class SimulationRun
 {
     private Creature C;
-    public readonly int MaxStates;
     private int NumStates;
-    public int ReadNumStates { get => NumStates; }
     private State[] States;
-    public State[] ReadState { get => States; }
     private bool Finished;
     private float MaximumTime;
-    public float ReadMaximumTime {get => MaximumTime; }
+
+    public readonly int MaxStates;
+    // public int _NumStates { get => NumStates; }
+    // public State[] _States { get => States; }
+    public float _MaximumTime {get => MaximumTime; }
 
     // Initialize empty SimulationRun, to be filled by a simulation
     public SimulationRun(Creature c, int maxStates) {
-        this.C = c;
+        C = c;
 
-        this.MaxStates = maxStates;
-        this.NumStates = 0;
-        this.States = new State[this.MaxStates];
+        MaxStates = maxStates;
+        NumStates = 0;
+        States = new State[MaxStates];
 
-        this.Finished = false;
+        Finished = false;
     }
 
     // Initialize SimulationRun from an existing list of states.
     public SimulationRun(Creature c, State[] states) {
-        this.C = c;
+        C = c;
 
-        this.MaxStates = states.Length;
-        this.NumStates = states.Length;
-        this.States = states;
+        MaxStates = states.Length;
+        NumStates = states.Length;
+        States = states;
 
-        this.Finished = true;
+        Finished = true;
     }
 
     public void AddState(State state) {
-        if (this.Finished || this.NumStates >= this.MaxStates) {
+        if (Finished || NumStates >= MaxStates) {
             Debug.Log("Tried to add state when SimulationRun is already Finished.");
             return;
         }
-        this.States[this.NumStates] = state;
-        this.NumStates++;
+        States[NumStates] = state;
+        NumStates++;
     }
 
     public void Finish() {
-        if (this.Finished) {
+        if (Finished) {
             Debug.Log("Tried to Finish an already Finished SimulationRun.");
         }
-        if (this.NumStates < this.MaxStates) {
-            Debug.Log("Tried to Finish SimulationRun while not full, only " + this.NumStates + "/" + this.MaxStates + " States.");
+        if (NumStates < MaxStates) {
+            Debug.Log("Tried to Finish SimulationRun while not full, only " + NumStates + "/" + MaxStates + " States.");
             return;
         }
-        this.Finished = true;
-        State lastState = this.States[this.MaxStates - 1];
-        this.MaximumTime = lastState.time;
+        Finished = true;
+        State lastState = States[MaxStates - 1];
+        MaximumTime = lastState.time;
     }
 
     public State GetStateBeforeTime(float time) {
-        // find where this.time is within the States array
+        // find where time is within the States array
         int BeforeStateIndex = FindStateBeforeTime(time);
-        return this.States[BeforeStateIndex];
+        return States[BeforeStateIndex];
     }
 
     public State GetStateAtExactTime(float time) {
-        // find where this.time is within the States array
+        // find where time is within the States array
         int BeforeStateIndex = FindStateBeforeTime(time);
 
-        // linearly interpolate between the two states around the result using this.time as the fraction.
-        State Before = this.States[BeforeStateIndex];
-        State After = this.States[BeforeStateIndex + 1];
+        // linearly interpolate between the two states around the result using time as the fraction.
+        State Before = States[BeforeStateIndex];
+        State After = States[BeforeStateIndex + 1];
         return State.LerpByTime(Before, After, time);
     }
     
@@ -79,11 +80,11 @@ public class SimulationRun
     private int FindStateBeforeTime(float time) {
         // binary search algorithm, since time is ordered in the states array
         int low = 0;
-        int high = this.States.Length - 2;
+        int high = States.Length - 2;
         int result = 0;
         
         // if the target time is out of bounds, clamp it within bounds
-        time = Mathf.Clamp(time, this.States[low].time, this.States[high + 1].time);
+        time = Mathf.Clamp(time, States[low].time, States[high + 1].time);
 
         // keep count of iterations in case of endless looping
         int i = 0;
@@ -101,10 +102,10 @@ public class SimulationRun
             int mid = (low + high) / 2;
 
             // check where the wanted time is relative to the middle of the range
-            if (time < this.States[mid].time) {
+            if (time < States[mid].time) {
                 // if time is below the middle range, restrict the search range to the lower half
                 high = mid - 1;
-            } else if (time > this.States[mid + 1].time) {
+            } else if (time > States[mid + 1].time) {
                 // if time is above the middle range, restrict the search range to the upper half
                 low = mid + 1;
             } else {
@@ -118,13 +119,13 @@ public class SimulationRun
     }
 
     // returns a new creature like the simulated creature at the start of the run
-    public Creature GetCreatureAtStartOfRun() {
-        return new Creature(this.States[0], this.C);
+    public CreatureModel GetCreatureModel() {
+        return new CreatureModel(States[0], C, "RunModel");
     }
 
     public override string ToString() {
-        string s = this.C.ToString() + "\n";
-        foreach (State state in this.States) {
+        string s = C.ToString() + "\n";
+        foreach (State state in States) {
             s += state.ToString() + "\n";
         }
         return s;
