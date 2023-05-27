@@ -4,41 +4,58 @@ using UnityEngine;
 
 public abstract class CreatureBase
 {
-    protected GameObject Object;
     protected float Radius;
     protected int Jets;
     protected float JetLength;
     protected float JetRadius;
     protected Vector3 JetArm;
-    protected Vector3[] JetAngles;
+    protected GameObject Object;
+    protected GameObject BodyObject;
+    protected GameObject[] JetStarts;
+    protected GameObject[] JetEnds;
+    protected GameObject[] JetArms;
+    protected GameObject[] JetLegs;
 
-
-    public GameObject _Object { get => Object; set => Object = value; }
     public float _Radius { get => Radius; set => Radius = value; }
     public int _Jets { get => Jets; set => Jets = value; }
     public float _JetLength { get => JetLength; set => JetLength = value; }
     public float _JetRadius { get => JetRadius; set => JetRadius = value; }
     public Vector3 _JetArm { get => JetArm; set => JetArm = value; }
-    public Vector3[] _JetAngles { get => JetAngles; set => JetAngles = value; }
-    
-    public Vector3 Position { get => Object.transform.position; }
-    public Quaternion Rotation { get => Object.transform.rotation; }
+    public GameObject _Object { get => Object; set => Object = value; }
+    public GameObject _BodyObject { get => BodyObject; set => BodyObject = value; }
+    public GameObject[] _JetStarts { get => JetStarts; set => JetStarts = value; }
+    public GameObject[] _JetEnds { get => JetEnds; set => JetEnds = value; }
+    public GameObject[] _JetArms { get => JetArms; set => JetArms = value; }
+    public GameObject[] _JetLegs { get => JetLegs; set => JetLegs = value; }
 
     // set the position and rotation of the creature's GameObject
-    public abstract void SetPositionAndRotation(Vector3 position, Quaternion rotation);
+    public void SetPositionAndRotation(Vector3 position, Quaternion rotation) {
+        Object.transform.SetPositionAndRotation(position, rotation);
+    }
+
+    // returns the local coordinates of the start of the given Jet
+    public Vector3 GetLocalJetStart(int JetIndex) {
+        return JetStarts[JetIndex].transform.localPosition;
+    }
+
+    // returns the local coordinates of the end of the given Jet
+    public Vector3 GetLocalJetEnd(int JetIndex) {
+        return JetEnds[JetIndex].transform.localPosition;
+    }
 
     // returns the local coordinates of the start and end of the given Jet
-    public (Vector3, Vector3) GetLocalJetStartAndEnd(int JetIndex) {
-        // calculate which direction the arm faces relative to the creature's facing
-        float armFacingAngle = JetIndex * 360 / Jets;
-        Quaternion armRotation = Quaternion.Euler(0, armFacingAngle, 0);
-        // the start of the jet is at the end of the JetArm
-        Vector3 jetStart = armRotation * JetArm;
-        // the rotation of the jet relative to the arm
-        Quaternion jetRotation = Quaternion.Euler(0, JetAngles[JetIndex].y, JetAngles[JetIndex].z);
-        // the vector that travels from the jet's start to the jet's end;
-        Vector3 jetVector = armRotation * jetRotation * Vector3.down * JetLength;
-        Vector3 jetEnd = jetVector + jetStart;
+    public (Vector3, Vector3) GetLocalJetStartAndEnd(int JetIndex)
+    {
+        Vector3 jetStart = JetStarts[JetIndex].transform.localPosition;
+        Vector3 jetEnd = JetEnds[JetIndex].transform.localPosition;
         return (jetStart, jetEnd);
+    }
+
+    // returns a Quaternion describing the rotation of the given jet's arm relative to the creature's forward direction
+    public static Quaternion CalculateJetArmRotation(int jetIndex, int jets) {
+        // the angle in degrees
+        float armFacingAngle = jetIndex * 360 / jets;
+        // a rotation of that many degrees around the Y axis
+        return Quaternion.Euler(0, armFacingAngle, 0); ;
     }
 }

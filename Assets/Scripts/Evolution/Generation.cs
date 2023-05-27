@@ -15,11 +15,15 @@ public class Generation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Sim = new Simulator(60, 15);
+
         CBuilder = new CreatureBuilder();
         CDirector = new CreatureDirector();
+
         GenerateCreatures();
-        Sim = new Simulator(60, 15);
         Runs = Sim.SimulateCreatures(Creatures);
+        DestroyCreatures();
+
         BeginCreatureVisualisation(0);
     }
 
@@ -31,8 +35,14 @@ public class Generation : MonoBehaviour
         }
     }
 
+    void DestroyCreatures() {
+        for (int i = 0; i < GenerationSize; i++) {
+            Destroy(Creatures[i]._Object);
+        }
+    }
+
     void BeginCreatureVisualisation(int CreatureIndex) {
-        Visualiser = new SimulationVisualiser(Runs[CreatureIndex], "Creature");
+        Visualiser = new SimulationVisualiser(Runs[CreatureIndex]);
     }
 
     void Update() {

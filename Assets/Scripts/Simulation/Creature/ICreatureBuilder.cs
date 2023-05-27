@@ -5,25 +5,26 @@ using UnityEngine;
 public interface ICreatureBuilder
 {
     public void Reset();
-    public void InitializeGameObject();
-    public void SetPositionAndRotation(Vector3 position, Quaternion rotation);
+    public void InitializeParentObject();
     public void InitializePhysicsBody();
     public void InitializeCreatureLimits(
         float radius,
-        float maxJetAngleChangePerSecond,
+        float maxThrustChangePerSecond,
         float thrustToWeight
     );
-    public void InitializeJets(
+    public void InitializeJetParameters(
         int jets,
         float jetLength,
         float jetRadius,
         Vector3 jetArm
     );
-    public void SetJetAngles(Vector3[] jetAngles);
-    public void SetJetAngles();
-    public void SetThrusts(float[] thrusts);
-    public void SetThrusts();
+    public void InitializeThrusts();
+    public void SetPositionAndRotation(Vector3 position, Quaternion rotation);
+    public void InitializeCreatureGameObjects();
     public void InitializeColliders();
+    public void InitializeRigidbodies(float jetMass);
+    public void InitializeJoints(float spring, float damper);
+    public void InitializeCreatureModel();
     public void SetBrain(IBrain brain);
     public Creature GetResult();
 }

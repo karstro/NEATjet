@@ -11,11 +11,10 @@ public class SimulationVisualiser
     private float PlaySpeed;
     private SimulationRun Run;
 
-    public SimulationVisualiser(SimulationRun run, string name) {
+    public SimulationVisualiser(SimulationRun run) {
         // prepare to visualise the given run
         Run = run;
         Model = Run.GetCreatureModel();
-        // Object = CreatureModelBuilder.BuildCreatureModel(c, name);
 
         // initialize time related variables
         time = 0f;
@@ -35,7 +34,6 @@ public class SimulationVisualiser
         }
     }
 
-    // Update is called once per frame
     public void Update() {
         State InterpolatedState = Run.GetStateAtExactTime(time);
         Model.VisualiseState(InterpolatedState);

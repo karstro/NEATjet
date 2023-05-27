@@ -12,9 +12,7 @@ public class SimulationRun
     private float MaximumTime;
 
     public readonly int MaxStates;
-    // public int _NumStates { get => NumStates; }
-    // public State[] _States { get => States; }
-    public float _MaximumTime {get => MaximumTime; }
+    public float _MaximumTime { get => MaximumTime; }
 
     // Initialize empty SimulationRun, to be filled by a simulation
     public SimulationRun(Creature c, int maxStates) {
@@ -120,13 +118,14 @@ public class SimulationRun
 
     // returns a new creature like the simulated creature at the start of the run
     public CreatureModel GetCreatureModel() {
-        return new CreatureModel(States[0], C, "RunModel");
+        return new CreatureModel(States[0], C);
     }
 
     public override string ToString() {
-        string s = C.ToString() + "\n";
-        foreach (State state in States) {
-            s += state.ToString() + "\n";
+        string s = C + "\n";
+        s += NumStates + " states\n";
+        for (int i = 0; i < NumStates; i++) {
+            s += "state " + i + ": " + States[i] + "\n";
         }
         return s;
     }

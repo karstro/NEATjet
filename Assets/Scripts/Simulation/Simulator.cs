@@ -10,15 +10,15 @@ public class Simulator
     private int Steps;
     public int ReadSteps { get => Steps; }
 
-    public Simulator(int StepsPerSecond, int TimeOut) {
-        this.StepsPerSecond = StepsPerSecond;
-        this.TimeOut = TimeOut;
+    public Simulator(int stepsPerSecond, int timeOut) {
+        StepsPerSecond = stepsPerSecond;
+        TimeOut = timeOut;
 
         // Calculate how big each timestep should be
-        this.dt = 1 / (float) this.StepsPerSecond;
+        dt = 1f / StepsPerSecond;
 
         // Calculate how many steps will result from a simulation run
-        this.Steps = this.TimeOut * this.StepsPerSecond + 1;
+        Steps = TimeOut * StepsPerSecond + 1;
 
         // Disable automatic physics simulation so this class can manually control it
         if (Physics.autoSimulation) {
@@ -32,23 +32,24 @@ public class Simulator
 
         // Store each creature's state before the first timestep
         for (int CreatureIndex = 0; CreatureIndex < NumCreatures; CreatureIndex++) {
-            Creature c = Creatures[CreatureIndex];
-            Runs[CreatureIndex] = new SimulationRun(c, Steps);
-            Runs[CreatureIndex].AddState(new State(0, c));
+            Creature creature = Creatures[CreatureIndex];
+            Runs[CreatureIndex] = new SimulationRun(creature, Steps);
+            Runs[CreatureIndex].AddState(new State(0, creature));
         }
 
         // run each step sequentially and save the state it ends up in
         for (int TimeStep = 1; TimeStep < Steps; TimeStep++) {
-            float time = TimeStep * this.dt;
+            float time = TimeStep * dt;
             foreach(Creature c in Creatures) {
-                c.Update(time, this.dt);
+                c.Update(time, dt);
             }
 
             // Unity simulates a physics step that is this.dt seconds long
-            Physics.Simulate(this.dt);
+            Physics.Simulate(dt);
             
             // Store each creature's state after the timestep
             for (int CreatureIndex = 0; CreatureIndex < NumCreatures; CreatureIndex++) {
+                //Debug.Log(new State(time, Creatures[CreatureIndex]));
                 Runs[CreatureIndex].AddState(new State(time, Creatures[CreatureIndex]));
             }
         }
