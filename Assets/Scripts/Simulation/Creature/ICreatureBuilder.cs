@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public interface ICreatureBuilder
@@ -25,6 +23,5 @@ public interface ICreatureBuilder
     public void InitializeRigidbodies(float jetMass);
     public void InitializeJoints(float spring, float damper);
     public void InitializeCreatureModel();
-    public void SetBrain(IBrain brain);
-    public Creature GetResult();
+    public ICreatureInternals GetResult();
 }

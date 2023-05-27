@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CreatureModel : CreatureBase
+public class CreatureModel : CreatureInternals
 {
     public Transform Transform { get => Object.transform; }
     //public string Name { get => Object.name; set => Object.name = value; }
@@ -11,11 +11,11 @@ public class CreatureModel : CreatureBase
         SetPositionAndRotation(state.Position, state.Rotation);
         
         // set the static values
-        Radius = c._Radius;
-        Jets = c._Jets;
-        JetArm = c._JetArm;
-        JetLength = c._JetLength;
-        JetRadius = c._JetRadius;
+        Radius = c.Radius;
+        Jets = c.Jets;
+        JetArm = c.JetArm;
+        JetLength = c.JetLength;
+        JetRadius = c.JetRadius;
 
         // build the GameObjects that show the CreatureModel
         CreatureModelBuilder.Build(this, state.JetEnds);

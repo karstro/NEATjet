@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SimulationVisualiser
 {
@@ -9,7 +7,7 @@ public class SimulationVisualiser
     private bool Play;
     private string PlayString;
     private float PlaySpeed;
-    private SimulationRun Run;
+    private readonly SimulationRun Run;
 
     public SimulationVisualiser(SimulationRun run) {
         // prepare to visualise the given run
@@ -28,8 +26,8 @@ public class SimulationVisualiser
         if (Play) {
             time += Time.deltaTime * PlaySpeed;
             // if time would go over the upper bound, set it back to the upper bound
-            if (time > Run._MaximumTime) {
-                time = Run._MaximumTime;
+            if (time > Run.MaximumTime) {
+                time = Run.MaximumTime;
             }
         }
     }
@@ -48,7 +46,7 @@ public class SimulationVisualiser
         float y = Screen.height - SliderHeight - 20;
 
         // UI that shows and allows the user to change the time that the visualizer visualizes
-        time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), time, 0f, Run._MaximumTime);
+        time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), time, 0f, Run.MaximumTime);
 
         // a button that toggles whether the visualizer will automatically play.
         float ButtonWidth = 50;

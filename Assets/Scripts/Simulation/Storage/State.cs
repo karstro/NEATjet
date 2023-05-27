@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 // struct that contains the state of a simulation step at a specific time
@@ -10,16 +8,16 @@ public readonly struct State
     public readonly Quaternion Rotation;
     public readonly Vector3[] JetEnds;
 
-    public State(float time, Creature c) {
+    public State(float time, Creature creature) {
         this.time = time;
 
-        (Vector3 position, Quaternion rotation) = c.GetPositionAndRotation();
+        (Vector3 position, Quaternion rotation) = creature.GetPositionAndRotation();
         Position = position;
         Rotation = rotation;
 
-        JetEnds = new Vector3[c._Jets];
-        for (int jetIndex = 0; jetIndex < c._Jets; jetIndex++) {
-            JetEnds[jetIndex] = c.GetLocalJetEnd(jetIndex);
+        JetEnds = new Vector3[creature.Jets];
+        for (int jetIndex = 0; jetIndex < creature.Jets; jetIndex++) {
+            JetEnds[jetIndex] = creature.GetLocalJetEnd(jetIndex);
         }
     }
 

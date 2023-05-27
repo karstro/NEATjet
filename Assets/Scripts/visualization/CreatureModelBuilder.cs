@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CreatureModelBuilder
@@ -34,38 +32,38 @@ public class CreatureModelBuilder
 
     // build the model of the individual jet indicated by the jetIndex
     private static void BuildJet(CreatureModel model, int jetIndex, Vector3 jetStartPos, Vector3 jetEndPos) {
-        float JetWidth = 2 * model._JetRadius;
+        float JetWidth = 2 * model.JetRadius;
         string JetName = "Jet" + jetIndex.ToString();
         // Build the spheres at the jet's start and end
-        model._JetStarts[jetIndex] = BuildSphereAt(model.Transform, jetStartPos, JetWidth, JetName + "Start");
-        model._JetEnds[jetIndex] = BuildSphereAt(model.Transform, jetEndPos, JetWidth, JetName + "End");
+        model.JetStarts[jetIndex] = BuildSphereAt(model.Transform, jetStartPos, JetWidth, JetName + "Start");
+        model.JetEnds[jetIndex] = BuildSphereAt(model.Transform, jetEndPos, JetWidth, JetName + "End");
         // Build Cylinders from Center to jet's start, then to jet's end
-        model._JetArms[jetIndex] = BuildCylinderFromTo(model.Transform, Vector3.zero, jetStartPos, JetWidth, JetName + "Arm");
-        model._JetLegs[jetIndex] = BuildCylinderFromTo(model.Transform, jetStartPos, jetEndPos, JetWidth, JetName);
+        model.JetArms[jetIndex] = BuildCylinderFromTo(model.Transform, Vector3.zero, jetStartPos, JetWidth, JetName + "Arm");
+        model.JetLegs[jetIndex] = BuildCylinderFromTo(model.Transform, jetStartPos, jetEndPos, JetWidth, JetName);
     }
 
     // build each jet
     private static void BuildJets(CreatureModel model, Vector3[] jetEnds) {
-        for (int jetIndex = 0; jetIndex < model._Jets; jetIndex++) {
-            Quaternion armRotation = CreatureBase.CalculateJetArmRotation(jetIndex, model._Jets);
-            Vector3 jetStart = armRotation * model._JetArm;
+        for (int jetIndex = 0; jetIndex < model.Jets; jetIndex++) {
+            Quaternion armRotation = CreatureInternals.CalculateJetArmRotation(jetIndex, model.Jets);
+            Vector3 jetStart = armRotation * model.JetArm;
             Vector3 jetEnd = jetEnds[jetIndex];
             BuildJet(model, jetIndex, jetStart, jetEnd);
         }
     }
 
     private static void InitializeArrays(CreatureModel model) {
-        model._JetStarts = new GameObject[model._Jets];
-        model._JetEnds = new GameObject[model._Jets];
-        model._JetArms = new GameObject[model._Jets];
-        model._JetLegs = new GameObject[model._Jets];
+        model.JetStarts = new GameObject[model.Jets];
+        model.JetEnds = new GameObject[model.Jets];
+        model.JetArms = new GameObject[model.Jets];
+        model.JetLegs = new GameObject[model.Jets];
     }
 
     // build the central body of the creature
     private static void BuildBody(CreatureModel model) {
         // #TODO replace body sphere with utah teapot. thanks i hate it.
         // body is currently just a sphere
-        float diameter = 2 * model._Radius;
+        float diameter = 2 * model.Radius;
         BuildSphereAt(model.Transform, Vector3.zero, diameter, "Body");
     }
 

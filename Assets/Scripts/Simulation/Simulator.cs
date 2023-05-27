@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Simulator
 {
-    private int StepsPerSecond;
-    private int TimeOut;
-    private float dt;
-    private int Steps;
-    public int ReadSteps { get => Steps; }
+    private readonly int StepsPerSecond;
+    private readonly int TimeOut;
+    private readonly float dt;
+    private readonly int Steps;
 
     public Simulator(int stepsPerSecond, int timeOut) {
         StepsPerSecond = stepsPerSecond;
@@ -44,7 +43,7 @@ public class Simulator
                 c.Update(time, dt);
             }
 
-            // Unity simulates a physics step that is this.dt seconds long
+            // Unity simulates a physics step that is dt seconds long
             Physics.Simulate(dt);
             
             // Store each creature's state after the timestep

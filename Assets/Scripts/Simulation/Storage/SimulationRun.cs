@@ -1,22 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-// to avoid using multidimensional arrays of states for multiple simulation runs, store one creature's run in one object.
-public class SimulationRun
-{
-    private Creature C;
+// stores one creature's run as a sequence of states.
+public class SimulationRun {
+    // storing creature may become unnecessary once CreatureModel is fased out
+    private readonly Creature creature;
     private int NumStates;
-    private State[] States;
+    private readonly State[] States;
     private bool Finished;
-    private float MaximumTime;
 
+    public float MaximumTime { get; private set; }
     public readonly int MaxStates;
-    public float _MaximumTime { get => MaximumTime; }
 
     // Initialize empty SimulationRun, to be filled by a simulation
     public SimulationRun(Creature c, int maxStates) {
-        C = c;
+        creature = c;
 
         MaxStates = maxStates;
         NumStates = 0;
@@ -27,7 +24,7 @@ public class SimulationRun
 
     // Initialize SimulationRun from an existing list of states.
     public SimulationRun(Creature c, State[] states) {
-        C = c;
+        creature = c;
 
         MaxStates = states.Length;
         NumStates = states.Length;
@@ -50,18 +47,12 @@ public class SimulationRun
             Debug.Log("Tried to Finish an already Finished SimulationRun.");
         }
         if (NumStates < MaxStates) {
-            Debug.Log("Tried to Finish SimulationRun while not full, only " + NumStates + "/" + MaxStates + " States.");
+            Debug.LogError("Tried to Finish SimulationRun while not full, only " + NumStates + "/" + MaxStates + " States.");
             return;
         }
         Finished = true;
         State lastState = States[MaxStates - 1];
         MaximumTime = lastState.time;
-    }
-
-    public State GetStateBeforeTime(float time) {
-        // find where time is within the States array
-        int BeforeStateIndex = FindStateBeforeTime(time);
-        return States[BeforeStateIndex];
     }
 
     public State GetStateAtExactTime(float time) {
@@ -118,11 +109,11 @@ public class SimulationRun
 
     // returns a new creature like the simulated creature at the start of the run
     public CreatureModel GetCreatureModel() {
-        return new CreatureModel(States[0], C);
+        return new CreatureModel(States[0], creature);
     }
 
     public override string ToString() {
-        string s = C + "\n";
+        string s = creature + "\n";
         s += NumStates + " states\n";
         for (int i = 0; i < NumStates; i++) {
             s += "state " + i + ": " + States[i] + "\n";

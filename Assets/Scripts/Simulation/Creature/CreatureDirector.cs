@@ -1,13 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CreatureDirector
-{
+public class CreatureDirector {
     public CreatureDirector() { }
 
-    // make a simple creature with default parameters and a static brain
-    public void MakeSimpleCreature(ICreatureBuilder builder)
+    // make a simple creature with arbitrary default parameters
+    public ICreatureInternals MakeSimpleCreature(ICreatureBuilder builder)
     {
         // parameters of the creature
         float radius = 0.4f;
@@ -18,7 +15,7 @@ public class CreatureDirector
         int jets = 4;
         float jetLength = 1f;
         float jetRadius = 0.2f;
-        Vector3 jetArm = new Vector3(1f, 0.5f, 0f);
+        Vector3 jetArm = new(1f, 0.5f, 0f);
         float jetMass = 0.1f;
 
         // strength of the forces of the joints
@@ -29,7 +26,7 @@ public class CreatureDirector
         bool makeModel = true;
 
         // calculate where the creature starts
-        float creatureHeight = jetLength - jetArm.y + jetRadius + 0.1f;
+        float creatureHeight = jetLength - jetArm.y + jetRadius + 0.5f;
         // should this include offset in position?
         Vector3 position = Vector3.up * creatureHeight;
         Quaternion rotation = Quaternion.identity;
@@ -68,9 +65,8 @@ public class CreatureDirector
             builder.InitializeCreatureModel();
         }
 
-        // create and set the creature's brain
-        IBrain brain = new StaticBrain();
-        builder.SetBrain(brain);
+        // return the created creature
+        return builder.GetResult();
     }
 
     // public void MakeComplexCreature(ICreatureBuilder creatureBuilder, IBrainBuilder brainBuilder) {

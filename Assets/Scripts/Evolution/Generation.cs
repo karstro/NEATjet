@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Generation : MonoBehaviour
 {
@@ -9,16 +7,11 @@ public class Generation : MonoBehaviour
     private Simulator Sim;
     private SimulationRun[] Runs;
     private SimulationVisualiser Visualiser;
-    private CreatureBuilder CBuilder;
-    private CreatureDirector CDirector;
 
     // Start is called before the first frame update
     void Start()
     {
         Sim = new Simulator(60, 15);
-
-        CBuilder = new CreatureBuilder();
-        CDirector = new CreatureDirector();
 
         GenerateCreatures();
         Runs = Sim.SimulateCreatures(Creatures);
@@ -30,14 +23,13 @@ public class Generation : MonoBehaviour
     void GenerateCreatures() {
         Creatures = new Creature[GenerationSize];
         for (int i = 0; i < GenerationSize; i++) {
-            CDirector.MakeSimpleCreature(CBuilder);
-            Creatures[i] = CBuilder.GetResult();
+            Creatures[i] = new(CreatureType.ConfigurableJointCreature);
         }
     }
 
     void DestroyCreatures() {
         for (int i = 0; i < GenerationSize; i++) {
-            Destroy(Creatures[i]._Object);
+            Creatures[i].Destroy();
         }
     }
 
@@ -46,14 +38,10 @@ public class Generation : MonoBehaviour
     }
 
     void Update() {
-        if (Visualiser != null) {
-            Visualiser.Update();
-        }
+        Visualiser?.Update();
     }
 
     void OnGUI() {
-        if (Visualiser != null) {
-            Visualiser.OnGUI();
-        }
+        Visualiser?.OnGUI();
     }
 }

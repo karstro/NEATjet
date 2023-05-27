@@ -1,23 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StaticBrain : IBrain
 {
-    public (Vector3[], float[]) GetIntent(float time, Creature c) {
-        Vector3[] jetDirections = new Vector3[c._Jets];
-        float[] thrusts = new float[c._Jets];
-        for (int JetIndex = 0; JetIndex < c._Jets; JetIndex++) {
+    private readonly Vector3[] JetDirections;
+    private readonly float[] Thrusts;
+
+    public StaticBrain(Vector3[] jetDirections, float[] thrusts) { 
+        JetDirections = jetDirections;
+        Thrusts = thrusts;
+    }
+
+    public StaticBrain(int jets) {
+        JetDirections = new Vector3[jets];
+        Thrusts = new float[jets];
+        for (int JetIndex = 0; JetIndex < jets; JetIndex++) {
             if (JetIndex % 2 == 0) {
-                jetDirections[JetIndex] = Vector3.down;
+                JetDirections[JetIndex] = Vector3.down;
             } else {
-                jetDirections[JetIndex] = Vector3.right;
+                JetDirections[JetIndex] = Vector3.right;
                 //jetDirections[JetIndex] = Vector3.up;
                 //jetDirections[JetIndex] = Vector3.down;
             }
-            // jetAngles[JetIndex] = Vector3.zero;
-            thrusts[JetIndex] = 0f;
+            Thrusts[JetIndex] = 0f;
         }
-        return (jetDirections, thrusts);
+    }
+
+    public (Vector3[], float[]) GetIntent(float time, Creature c) {
+        return (JetDirections, Thrusts);
     }
 }
