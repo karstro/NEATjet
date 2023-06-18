@@ -28,7 +28,7 @@ public class Creature {
                 builder = new ColliderCreatureBuilder();
                 break;
             default:
-                builder = null;
+                builder = new CreatureBuilder();
                 break;
         }
         Internals = Director.MakeSimpleCreature(builder);
@@ -36,14 +36,13 @@ public class Creature {
         Brain = new StaticBrain(Internals.Jets);
     }
 
-    //public Creature(IGenerator gene) {
+    //public Creature(IGene gene) {
 
     //}
 
     public Creature(SimulationRun run) {
         Type = CreatureType.ModelCreature;
-        // #TODO consider dependency injection for the builder
-        ConfigurableJointCreatureBuilder builder = new();
+        CreatureBuilder builder = new();
         Internals = Director.MakeCreatureModel(builder, run);
     }
 
@@ -69,8 +68,8 @@ public class Creature {
         return Internals.GetLocalJetStartAndEnd(JetIndex);
     }
 
+    // get the creature's intent from it's Brain and let the internals apply it
     public void Update(float time, float deltaTime) {
-        // get the creature's intent from it's Brain
         (Vector3[] rotationIntents, float[] thrustIntents) = Brain.GetIntent(time, this);
         Internals.Update(time, deltaTime, rotationIntents, thrustIntents);
     }
