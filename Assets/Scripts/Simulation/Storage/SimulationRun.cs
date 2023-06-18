@@ -2,8 +2,12 @@ using UnityEngine;
 
 // stores one creature's run as a sequence of states.
 public class SimulationRun {
-    // storing creature may become unnecessary once CreatureModel is fased out
-    private readonly Creature creature;
+    public readonly float Radius;
+    public readonly int Jets;
+    public readonly Vector3 JetArm;
+    public readonly float JetLength;
+    public readonly float JetRadius;
+
     private int NumStates;
     private readonly State[] States;
     private bool Finished;
@@ -12,8 +16,12 @@ public class SimulationRun {
     public readonly int MaxStates;
 
     // Initialize empty SimulationRun, to be filled by a simulation
-    public SimulationRun(Creature c, int maxStates) {
-        creature = c;
+    public SimulationRun(Creature creature, int maxStates) {
+        Radius = creature.Radius;
+        Jets = creature.Jets;
+        JetArm = creature.JetArm;
+        JetLength = creature.JetLength;
+        JetRadius = creature.JetRadius;
 
         MaxStates = maxStates;
         NumStates = 0;
@@ -23,8 +31,12 @@ public class SimulationRun {
     }
 
     // Initialize SimulationRun from an existing list of states.
-    public SimulationRun(Creature c, State[] states) {
-        creature = c;
+    public SimulationRun(Creature creature, State[] states) {
+        Radius = creature.Radius;
+        Jets = creature.Jets;
+        JetArm = creature.JetArm;
+        JetLength = creature.JetLength;
+        JetRadius = creature.JetRadius;
 
         MaxStates = states.Length;
         NumStates = states.Length;
@@ -107,17 +119,15 @@ public class SimulationRun {
         return result;
     }
 
-    // returns a new creature like the simulated creature at the start of the run
-    public CreatureModel GetCreatureModel() {
-        return new CreatureModel(States[0], creature);
+    public State GetFirstState() {
+        return States[0];
     }
 
-    public override string ToString() {
-        string s = creature + "\n";
-        s += NumStates + " states\n";
-        for (int i = 0; i < NumStates; i++) {
-            s += "state " + i + ": " + States[i] + "\n";
-        }
-        return s;
-    }
+    //public override string ToString() {
+    //    string s = NumStates + " states\n";
+    //    for (int i = 0; i < NumStates; i++) {
+    //        s += "state " + i + ": " + States[i] + "\n";
+    //    }
+    //    return s;
+    //}
 }

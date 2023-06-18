@@ -17,7 +17,6 @@ public interface ICreatureInternals {
     public float MaxThrustChangePerSecond { get; set; }
     public float MaxThrust { get; set; }
     public float[] ThrustFractions { get; set; }
-    public ConfigurableJoint[] JetJoints { get; set; }
 
     public (Vector3, Quaternion) GetPositionAndRotation();
     public void SetPositionAndRotation(Vector3 position, Quaternion rotation);
@@ -27,4 +26,5 @@ public interface ICreatureInternals {
 
     public void Update(float time, float deltaTime, Vector3[] rotationIntents, float[] thrustIntents);
     public void Destroy();
+    public void MatchState(State state);
 }

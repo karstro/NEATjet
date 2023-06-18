@@ -4,8 +4,7 @@ public class CreatureDirector {
     public CreatureDirector() { }
 
     // make a simple creature with arbitrary default parameters
-    public ICreatureInternals MakeSimpleCreature(ICreatureBuilder builder)
-    {
+    public ICreatureInternals MakeSimpleCreature(ICreatureBuilder builder) {
         // parameters of the creature
         float radius = 0.4f;
         float maxThrustChangePerSecond = 1f;
@@ -18,9 +17,13 @@ public class CreatureDirector {
         Vector3 jetArm = new(1f, 0.5f, 0f);
         float jetMass = 0.1f;
 
-        // strength of the forces of the joints
+        // strength of the forces of the ConfigurableJointCreature's joints
         float spring = 500;
         float damper = 400;
+
+        // parameters of the ColliderCreature's smoothDamp
+        float maxSpeed = 2;
+        float smoothTime = 0.5f;
 
         // should a visible model be created?
         bool makeModel = true;
@@ -59,6 +62,8 @@ public class CreatureDirector {
         builder.InitializeColliders();
         builder.InitializeRigidbodies(jetMass);
         builder.InitializeJoints(spring, damper);
+        builder.InitializeAngularVelocities();
+        builder.InitializeSmoothDamp(maxSpeed, smoothTime);
 
         // create the model components if needed
         if (makeModel) {
@@ -69,8 +74,36 @@ public class CreatureDirector {
         return builder.GetResult();
     }
 
-    // public void MakeComplexCreature(ICreatureBuilder creatureBuilder, IBrainBuilder brainBuilder) {
+    // public void MakeComplexCreature(ICreatureBuilder builder, IBrainBuilder brainBuilder) {
     // }
 
-    // MakeCreatureModel?
+    public ICreatureInternals MakeCreatureModel(ICreatureBuilder builder, SimulationRun run) {
+        State startingState = run.GetFirstState();
+
+        // begin building creature
+        builder.Reset();
+
+        builder.InitializeParentObject();
+        builder.InitializePhysicsBody();
+
+        // initialize creature's parameters
+        builder.InitializeCreatureLimits(
+            run.Radius,
+            0,
+            0
+        );
+        builder.InitializeJetParameters(
+            run.Jets,
+            run.JetLength,
+            run.JetRadius,
+            run.JetArm
+        );
+        builder.SetPositionAndRotation(startingState.Position, startingState.Rotation);
+
+        // initialize creature's objects
+        builder.InitializeCreatureGameObjects();
+        builder.InitializeCreatureModel();
+
+        return builder.GetResult();
+    }
 }

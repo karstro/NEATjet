@@ -17,7 +17,7 @@ public class Generation : MonoBehaviour
         Runs = Sim.SimulateCreatures(Creatures);
         DestroyCreatures();
 
-        BeginCreatureVisualisation(0);
+        BeginCreatureVisualisation();
     }
 
     void GenerateCreatures() {
@@ -33,8 +33,8 @@ public class Generation : MonoBehaviour
         }
     }
 
-    void BeginCreatureVisualisation(int CreatureIndex) {
-        Visualiser = new SimulationVisualiser(Runs[CreatureIndex]);
+    void BeginCreatureVisualisation() {
+        Visualiser = new(Runs);
     }
 
     void Update() {

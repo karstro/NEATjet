@@ -10,20 +10,18 @@ public class ConfigurableJointCreatureInternals : CreatureInternals, ICreatureIn
     public float[] ThrustFractions { get; set; }
     public ConfigurableJoint[] JetJoints { get; set; }
 
-    // CreatureInternals is constructed by CreatureBuilder
+    // CreatureInternals is constructed by ICreatureBuilder
     public ConfigurableJointCreatureInternals() { }
 
-    private Quaternion GetJetSpaceTargetRotation(Vector3 creatureSpacetargetRotation) {
+    private Quaternion GetTargetRotation(Vector3 creatureSpacetargetRotation) {
         Quaternion targetRotation = Quaternion.FromToRotation(Vector3.down, creatureSpacetargetRotation);
         return targetRotation;
     }
 
     private void UpdateJoints(Vector3[] targetRotations) {
         for (int jetIndex = 0; jetIndex < Jets; jetIndex++) {
-            //Quaternion startRotation = JetRotationsAtStart[jetIndex];
             Quaternion startRotation = Quaternion.identity;
-            Quaternion targetRotation = GetJetSpaceTargetRotation(targetRotations[jetIndex]/*, jetIndex*/);
-            //Debug.Log("Leg " + jetIndex + ", start = " + startRotation + ", current = " + JetStarts[jetIndex].transform.localRotation + ", target = " + targetRotation);
+            Quaternion targetRotation = GetTargetRotation(targetRotations[jetIndex]);
             JetJoints[jetIndex].SetTargetRotationLocal(targetRotation, startRotation);
         }
     }
@@ -54,7 +52,7 @@ public class ConfigurableJointCreatureInternals : CreatureInternals, ICreatureIn
     }
 
     // update what the creature is doing based on its brain's intent
-    public void Update(float time, float deltaTime, Vector3[] rotationIntents, float[] thrustIntents/*, Senses senses*/) {
+    public void Update(float time, float deltaTime, Vector3[] rotationIntents, float[] thrustIntents) {
         // update all physics based components
         if (rotationIntents != null && thrustIntents != null) {
             UpdatePhysicsComponents(deltaTime, rotationIntents, thrustIntents);
@@ -71,5 +69,13 @@ public class ConfigurableJointCreatureInternals : CreatureInternals, ICreatureIn
             UnityEngine.Object.Destroy(child.gameObject);
         }
         UnityEngine.Object.Destroy(Object);
+    }
+
+    public void MatchState(State state) {
+        SetPositionAndRotation(state.Position, state.Rotation);
+        for (int jetIndex = 0; jetIndex < state.JetEnds.Length; jetIndex++) {
+            JetEnds[jetIndex].transform.position = state.JetEnds[jetIndex];
+        }
+        UpdateJetLimbs();
     }
 }

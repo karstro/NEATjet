@@ -21,7 +21,13 @@ public interface ICreatureBuilder
     public void InitializeCreatureGameObjects();
     public void InitializeColliders();
     public void InitializeRigidbodies(float jetMass);
-    public void InitializeJoints(float spring, float damper);
     public void InitializeCreatureModel();
     public ICreatureInternals GetResult();
+
+    // settings unique to ConfigurableJointCreatureInternals
+    public void InitializeJoints(float spring, float damper);
+
+    // settings unique to ColliderCreatureInternals
+    public void InitializeSmoothDamp(float maxSpeed, float smoothTime);
+    public void InitializeAngularVelocities();
 }

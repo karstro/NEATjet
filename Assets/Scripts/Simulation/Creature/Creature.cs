@@ -1,7 +1,11 @@
-﻿using UnityEngine;
+﻿using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine;
+using static UnityEditor.ObjectChangeEventStream;
 
 public enum CreatureType {
-    ConfigurableJointCreature
+    ModelCreature,
+    ConfigurableJointCreature,
+    ColliderCreature
 }
 
 // facade class and a factory class for CreatureInternals
@@ -12,15 +16,35 @@ public class Creature {
 
     public readonly CreatureType Type;
 
-    public Creature(CreatureType type/*, IGene? gene = null*/) {
+    public Creature(CreatureType type) {
         Type = type;
-        if (type == CreatureType.ConfigurableJointCreature) {
-            // #TODO consider dependency injection for the builder
-            ConfigurableJointCreatureBuilder Builder = new();
-            Internals = Director.MakeSimpleCreature(Builder);
+
+        ICreatureBuilder builder;
+        switch (Type) {
+            case CreatureType.ConfigurableJointCreature:
+                builder = new ConfigurableJointCreatureBuilder();
+                break;
+            case CreatureType.ColliderCreature:
+                builder = new ColliderCreatureBuilder();
+                break;
+            default:
+                builder = null;
+                break;
         }
+        Internals = Director.MakeSimpleCreature(builder);
 
         Brain = new StaticBrain(Internals.Jets);
+    }
+
+    //public Creature(IGenerator gene) {
+
+    //}
+
+    public Creature(SimulationRun run) {
+        Type = CreatureType.ModelCreature;
+        // #TODO consider dependency injection for the builder
+        ConfigurableJointCreatureBuilder builder = new();
+        Internals = Director.MakeCreatureModel(builder, run);
     }
 
     public float Radius { get => Internals.Radius; }
@@ -54,5 +78,9 @@ public class Creature {
     public void Destroy() {
         Internals.Destroy();
         //Brain.Destroy();
+    }
+
+    public void MatchState(State state) {
+        Internals.MatchState(state);
     }
 }

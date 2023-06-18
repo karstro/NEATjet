@@ -1,18 +1,27 @@
 ﻿using UnityEngine;
 
-public class SimulationVisualiser
-{
-    private CreatureModel Model;
+public class SimulationVisualiser {
     private float time;
     private bool Play;
     private string PlayString;
     private float PlaySpeed;
-    private readonly SimulationRun Run;
+    private readonly Creature[] Models;
+    private readonly SimulationRun[] Runs;
+    private readonly int NumRuns;
+    private readonly float MaximumTime;
 
-    public SimulationVisualiser(SimulationRun run) {
+    public SimulationVisualiser(SimulationRun[] runs) {
         // prepare to visualise the given run
-        Run = run;
-        Model = Run.GetCreatureModel();
+        Runs = runs;
+        NumRuns = runs.Length;
+        Models = new Creature[NumRuns];
+        MaximumTime = Runs[0].MaximumTime;
+        for (int i = 0; i < NumRuns; i++) {
+            Models[i] = new(Runs[i]);
+            if (Runs[i].MaximumTime < MaximumTime) { 
+                MaximumTime = Runs[i].MaximumTime;
+            }
+        }
 
         // initialize time related variables
         time = 0f;
@@ -26,15 +35,17 @@ public class SimulationVisualiser
         if (Play) {
             time += Time.deltaTime * PlaySpeed;
             // if time would go over the upper bound, set it back to the upper bound
-            if (time > Run.MaximumTime) {
-                time = Run.MaximumTime;
+            if (time > MaximumTime) {
+                time = MaximumTime;
             }
         }
     }
 
     public void Update() {
-        State InterpolatedState = Run.GetStateAtExactTime(time);
-        Model.VisualiseState(InterpolatedState);
+        for (int i = 0; i < NumRuns; i++) {
+            State InterpolatedState = Runs[i].GetStateAtExactTime(time);
+            Models[i].MatchState(InterpolatedState);
+        }
         UpdateTimeWhenPlaying();
     }
 
@@ -46,7 +57,7 @@ public class SimulationVisualiser
         float y = Screen.height - SliderHeight - 20;
 
         // UI that shows and allows the user to change the time that the visualizer visualizes
-        time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), time, 0f, Run.MaximumTime);
+        time = GUI.HorizontalSlider(new Rect(x, y, SliderWidth, SliderHeight), time, 0f, MaximumTime);
 
         // a button that toggles whether the visualizer will automatically play.
         float ButtonWidth = 50;
