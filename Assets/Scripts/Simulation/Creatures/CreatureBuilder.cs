@@ -137,7 +137,6 @@ namespace NeatJet.Scripts.Simulation.Creatures
             // all needed colliders must be at the center of their parent object
             collider.center = Vector3.zero;
             collider.radius = radius;
-            // #TODO make colliders collide only with the floor
             return collider;
         }
 
