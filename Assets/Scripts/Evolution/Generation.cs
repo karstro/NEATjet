@@ -3,6 +3,7 @@
 public class Generation : MonoBehaviour
 {
     public int GenerationSize = 1;
+
     private Creature[] Creatures;
     private Simulator Sim;
     private SimulationRun[] Runs;
@@ -20,28 +21,35 @@ public class Generation : MonoBehaviour
         BeginCreatureVisualisation();
     }
 
-    void GenerateCreatures() {
+    void GenerateCreatures()
+    {
         Creatures = new Creature[GenerationSize];
-        for (int i = 0; i < GenerationSize; i++) {
+        for (var i = 0; i < GenerationSize; i++)
+        {
             Creatures[i] = new(CreatureType.ConfigurableJointCreature);
         }
     }
 
-    void DestroyCreatures() {
-        for (int i = 0; i < GenerationSize; i++) {
+    void DestroyCreatures()
+    {
+        for (var i = 0; i < GenerationSize; i++)
+        {
             Creatures[i].Destroy();
         }
     }
 
-    void BeginCreatureVisualisation() {
+    void BeginCreatureVisualisation()
+    {
         Visualiser = new(Runs);
     }
 
-    void Update() {
+    void Update()
+    {
         Visualiser?.Update();
     }
 
-    void OnGUI() {
+    void OnGUI()
+    {
         Visualiser?.OnGUI();
     }
 }

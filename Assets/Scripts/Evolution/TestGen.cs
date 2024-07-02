@@ -1,15 +1,19 @@
 using UnityEngine;
 
 // creates one real-time creature for observation and debugging
-public class TestGen : MonoBehaviour {
-    private Creature creature;
+public class TestGen : MonoBehaviour
+{
+    public CreatureType CreatureType;
+    private Creature Creature;
 
-    public void Start() {
-        creature = new(CreatureType.ConfigurableJointCreature);
+    public void Start()
+    {
+        Creature = new(CreatureType);
     }
 
     // Update is called once per frame
-    public void Update() {
-        creature.Update(Time.time, Time.deltaTime);
+    public void Update()
+    {
+        Creature.Update(Time.time, Time.deltaTime);
     }
 }

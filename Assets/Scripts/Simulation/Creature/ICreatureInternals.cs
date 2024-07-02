@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public interface ICreatureInternals {
+public interface ICreatureInternals
+{
     public float Radius { get; set; }
     public int Jets { get; set; }
     public float JetLength { get; set; }

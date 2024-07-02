@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43
-    width: 1920
-    height: 1117
+    x: 8
+    y: 51
+    width: 1903
+    height: 1101
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,12 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1920
-    height: 1067
+    width: 1903
+    height: 1051
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 83
+  controlID: 39
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -59,23 +59,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Window
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1532
+    x: 1518
     y: 0
-    width: 388
-    height: 1067
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+    width: 385
+    height: 1051
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,10 +93,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 379
-    height: 645
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 376
+    height: 600
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -118,11 +118,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 645
-    width: 1532
-    height: 422
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    y: 600
+    width: 1518
+    height: 451
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 14}
@@ -149,8 +149,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
-    height: 1117
+    width: 1903
+    height: 1101
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1920
+    width: 1903
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1097
-    width: 1920
+    y: 1081
+    width: 1903
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -219,8 +219,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1532
-    height: 1067
+    width: 1518
+    height: 1051
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
@@ -244,8 +244,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1532
-    height: 645
+    width: 1518
+    height: 600
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -265,12 +265,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 379
+    x: 376
     y: 0
-    width: 1153
-    height: 645
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 1142
+    height: 600
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -298,10 +298,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1532
-    y: 73
-    width: 387
-    height: 1046
+    x: 1526
+    y: 81
+    width: 384
+    height: 1030
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -309,11 +309,11 @@ MonoBehaviour:
   progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 0
+  currentBranchAndRemoteHasUpdate: 1
   currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 0
+  repositoryProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 1
   changeTab: 3
   activeTab: 3
   initProjectView:
@@ -446,10 +446,10 @@ MonoBehaviour:
         treeIsCheckable: 0
         checkState: 0
       selectedNode:
-        path: origin
-        label: origin
-        level: 1
-        isFolder: 1
+        path: 
+        label: 
+        level: 0
+        isFolder: 0
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
@@ -462,10 +462,10 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 1
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2023-02-04T22:43:47.036+01:00
+      updatedTimeString: 2023-05-27T10:07:34.593+02:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2023-02-04T22:43:47.054+01:00
+      updatedTimeString: 2023-05-27T10:07:31.778+02:00
       cacheType: 1
     currentBranch:
       name: main
@@ -485,9 +485,9 @@ MonoBehaviour:
     - name: origin/main
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentBranchHasUpdate: 1
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: main
@@ -496,18 +496,20 @@ MonoBehaviour:
       assets:
         keys:
         - 00000000000000001000000000000000
-        - 004ab5848ae46b345b11fe92eee16bf1
-        - 0718926c37f2dba4d87fd646619442d4
-        - 4b7643b024f7cd84b8625a7d3adefc2a
+        - efeb2facb410206458e4a18f3a9e8f8a
+        - 9fc0d4010bbf28b4594072e72b8655ab
         - c77360c67b8d6de41b32a71e8394edb0
         - 815daa00402173a4c8d653aa42a96423
-        - ad71bf57223418a4194b4b5ab94153bb
+        - 0f813690f6c54d64895fe729e877bb79
         - a77a6941648385440a81143c27389aaf
+        - 2aafcfe0e861bf14daec1dbb8f15b45c
+        - 53dd9bdcd11635e43b8f2ffde28f701c
+        - 6cc392befa848d64d9da5962b940cc05
         - 295df38e8ebc36d4eb959dabd3afa601
-        - fc8c41ae45b72934b8e30bbe08ba5350
-        - d449b1b75dfbf4d45969d94768b85f45
-        - 08d7c301ba35108469e16eb99609de15
-        - 72e1d33591bae4e4ab6aed1025499df3
+        - 680d50af4d1152d4ea74d6bceac4b60b
+        - 9a898df410d417b4b867ce021ae23991
+        - 729442aac3cc5864bb2d8d4844a00124
+        - ed3b6f845bf90c94395cac15cbbd50c5
         values:
         - path: Assets
           label: Assets
@@ -527,8 +529,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Materials
-          label: Materials
+        - path: Assets\Scenes
+          label: Scenes
           level: 1
           isFolder: 1
           isContainer: 0
@@ -545,42 +547,24 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Materials\PhysicMaterials
-          label: PhysicMaterials
+        - path: Assets\Scenes\SampleScene.unity
+          label: SampleScene.unity
           level: 2
-          isFolder: 1
+          isFolder: 0
           isContainer: 0
           isCollapsed: 0
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
+            path: Assets\Scenes\SampleScene.unity
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
+            projectPath: Assets\Scenes\SampleScene.unity
             originalPath: 
-            indexStatus: 0
+            indexStatus: 3
             workTreeStatus: 0
-        - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-          label: PhysicsTest1.physicMaterial
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-            projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
         - path: Assets\Scripts
           label: Scripts
           level: 1
@@ -617,8 +601,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scripts\Evolution\Generation.cs
-          label: Generation.cs
+        - path: Assets\Scripts\Evolution\TestGen.cs
+          label: TestGen.cs
           level: 3
           isFolder: 0
           isContainer: 0
@@ -626,15 +610,15 @@ MonoBehaviour:
           isHidden: 0
           isActive: 0
           treeIsCheckable: 1
-          checkState: 0
+          checkState: 1
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Scripts\Evolution\Generation.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
-            projectPath: Assets\Scripts\Evolution\Generation.cs
+            path: Assets\Scripts\Evolution\TestGen.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\TestGen.cs
+            projectPath: Assets\Scripts\Evolution\TestGen.cs
             originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
+            indexStatus: 3
+            workTreeStatus: 0
         - path: Assets\Scripts\Simulation
           label: Simulation
           level: 2
@@ -653,63 +637,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature.cs
-          label: Creature.cs
+        - path: Assets\Scripts\Simulation\Creature
+          label: Creature
           level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Creature.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs
-            projectPath: Assets\Scripts\Simulation\Creature.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\Simulation\SimulationRun.cs
-          label: SimulationRun.cs
-          level: 3
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\SimulationRun.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs
-            projectPath: Assets\Scripts\Simulation\SimulationRun.cs
-            originalPath: 
-            indexStatus: 1
-            workTreeStatus: 1
-        - path: Assets\Scripts\Simulation\Simulator.cs
-          label: Simulator.cs
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Simulator.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
-            projectPath: Assets\Scripts\Simulation\Simulator.cs
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scripts\visualization
-          label: visualization
-          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -725,10 +655,10 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scripts\visualization\SimulationVisualiser.cs
-          label: SimulationVisualiser.cs
-          level: 3
-          isFolder: 0
+        - path: Assets\Scripts\Simulation\Creature\ColliderCreature
+          label: ColliderCreature
+          level: 4
+          isFolder: 1
           isContainer: 0
           isCollapsed: 0
           isHidden: 0
@@ -737,21 +667,129 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Scripts\visualization\SimulationVisualiser.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
-            projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
+            path: 
+            fullPath: 
+            projectPath: 
             originalPath: 
             indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+          label: ColliderCreatureBuilder.cs
+          level: 5
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+            projectPath: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 3
+        - path: Assets\Scripts\Simulation\Creature\Creature.cs
+          label: Creature.cs
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\Creature\Creature.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\Creature.cs
+            projectPath: Assets\Scripts\Simulation\Creature\Creature.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+          label: CreatureBuilder.cs
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+            projectPath: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 3
+        - path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+          label: CreatureDirector.cs
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+            projectPath: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 3
+        - path: Assets\Scripts\Simulation\Creature\CreatureType.cs
+          label: CreatureType.cs
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\Creature\CreatureType.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs
+            projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
+        - path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+          label: ICreatureBuilder.cs
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+            projectPath: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+            originalPath: 
+            indexStatus: 3
             workTreeStatus: 3
       folders:
         keys:
         - Assets
-        - Assets\Materials
-        - Assets\Materials\PhysicMaterials
+        - Assets\Scenes
         - Assets\Scripts
         - Assets\Scripts\Evolution
         - Assets\Scripts\Simulation
-        - Assets\Scripts\visualization
+        - Assets\Scripts\Simulation\Creature
+        - Assets\Scripts\Simulation\Creature\ColliderCreature
         - UserSettings
         - UserSettings\Layouts
         values:
@@ -773,27 +811,9 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Materials
-          label: Materials
+        - path: Assets\Scenes
+          label: Scenes
           level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Materials\PhysicMaterials
-          label: PhysicMaterials
-          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -863,9 +883,27 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Scripts\visualization
-          label: visualization
-          level: 2
+        - path: Assets\Scripts\Simulation\Creature
+          label: Creature
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\Simulation\Creature\ColliderCreature
+          label: ColliderCreature
+          level: 4
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -963,26 +1001,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Materials.meta
-        label: Materials.meta
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Materials.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials.meta
-          projectPath: Assets\Materials.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Materials
-        label: Materials
+      - path: Assets\Scenes
+        label: Scenes
         level: 1
         isFolder: 1
         isContainer: 0
@@ -999,8 +1019,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Materials\PhysicMaterials.meta
-        label: PhysicMaterials.meta
+      - path: Assets\Scenes\SampleScene.unity
+        label: SampleScene.unity
         level: 2
         isFolder: 0
         isContainer: 0
@@ -1008,69 +1028,15 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Materials\PhysicMaterials.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials.meta
-          projectPath: Assets\Materials\PhysicMaterials.meta
+          path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
           originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Materials\PhysicMaterials
-        label: PhysicMaterials
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
+          indexStatus: 3
           workTreeStatus: 0
-      - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-        label: PhysicsTest1.physicMaterial
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-          projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
-        label: PhysicsTest1.physicMaterial.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
-          projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
       - path: Assets\Scripts
         label: Scripts
         level: 1
@@ -1107,8 +1073,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scripts\Evolution\Generation.cs
-        label: Generation.cs
+      - path: Assets\Scripts\Evolution\TestGen.cs
+        label: TestGen.cs
         level: 3
         isFolder: 0
         isContainer: 0
@@ -1116,15 +1082,15 @@ MonoBehaviour:
         isHidden: 0
         isActive: 0
         treeIsCheckable: 1
-        checkState: 0
+        checkState: 1
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\Evolution\Generation.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
-          projectPath: Assets\Scripts\Evolution\Generation.cs
+          path: Assets\Scripts\Evolution\TestGen.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\TestGen.cs
+          projectPath: Assets\Scripts\Evolution\TestGen.cs
           originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
+          indexStatus: 3
+          workTreeStatus: 0
       - path: Assets\Scripts\Simulation
         label: Simulation
         level: 2
@@ -1143,81 +1109,9 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature.cs
-        label: Creature.cs
+      - path: Assets\Scripts\Simulation\Creature
+        label: Creature
         level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Creature.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs
-          projectPath: Assets\Scripts\Simulation\Creature.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\Simulation\SimulationRun.cs
-        label: SimulationRun.cs
-        level: 3
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\SimulationRun.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs
-          projectPath: Assets\Scripts\Simulation\SimulationRun.cs
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Simulation\SimulationRun.cs.meta
-        label: SimulationRun.cs.meta
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\SimulationRun.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs.meta
-          projectPath: Assets\Scripts\Simulation\SimulationRun.cs.meta
-          originalPath: 
-          indexStatus: 1
-          workTreeStatus: 1
-      - path: Assets\Scripts\Simulation\Simulator.cs
-        label: Simulator.cs
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Simulator.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
-          projectPath: Assets\Scripts\Simulation\Simulator.cs
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scripts\visualization
-        label: visualization
-        level: 2
         isFolder: 1
         isContainer: 0
         isCollapsed: 0
@@ -1233,10 +1127,10 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Scripts\visualization\SimulationVisualiser.cs
-        label: SimulationVisualiser.cs
-        level: 3
-        isFolder: 0
+      - path: Assets\Scripts\Simulation\Creature\ColliderCreature
+        label: ColliderCreature
+        level: 4
+        isFolder: 1
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
@@ -1245,11 +1139,137 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Scripts\visualization\SimulationVisualiser.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
-          projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
+          path: 
+          fullPath: 
+          projectPath: 
           originalPath: 
           indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+        label: ColliderCreatureBuilder.cs
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+          projectPath: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 3
+      - path: Assets\Scripts\Simulation\Creature\Creature.cs
+        label: Creature.cs
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\Creature\Creature.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\Creature.cs
+          projectPath: Assets\Scripts\Simulation\Creature\Creature.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+        label: CreatureBuilder.cs
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+          projectPath: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 3
+      - path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+        label: CreatureDirector.cs
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+          projectPath: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 3
+      - path: Assets\Scripts\Simulation\Creature\CreatureType.cs
+        label: CreatureType.cs
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\Creature\CreatureType.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs
+          projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
+        label: CreatureType.cs.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
+          projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+        label: ICreatureBuilder.cs
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+          projectPath: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+          originalPath: 
+          indexStatus: 3
           workTreeStatus: 3
       - path: UserSettings
         label: UserSettings
@@ -1269,6 +1289,24 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        label: EditorUserSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: UserSettings\Layouts
         label: Layouts
         level: 1
@@ -1325,63 +1363,63 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Materials.meta
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials.meta
-      projectPath: Assets\Materials.meta
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Materials\PhysicMaterials.meta
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials.meta
-      projectPath: Assets\Materials\PhysicMaterials.meta
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\Evolution\TestGen.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\TestGen.cs
+      projectPath: Assets\Scripts\Evolution\TestGen.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
-      projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
+      projectPath: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
-      projectPath: Assets\Materials\PhysicMaterials\PhysicsTest1.physicMaterial.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Evolution\Generation.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
-      projectPath: Assets\Scripts\Evolution\Generation.cs
-      originalPath: 
-      indexStatus: 0
+      indexStatus: 3
       workTreeStatus: 3
-    - path: Assets\Scripts\Simulation\Creature.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs
-      projectPath: Assets\Scripts\Simulation\Creature.cs
+    - path: Assets\Scripts\Simulation\Creature\Creature.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\Creature.cs
+      projectPath: Assets\Scripts\Simulation\Creature\Creature.cs
       originalPath: 
-      indexStatus: 0
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+      projectPath: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+      originalPath: 
+      indexStatus: 3
       workTreeStatus: 3
-    - path: Assets\Scripts\Simulation\SimulationRun.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs
-      projectPath: Assets\Scripts\Simulation\SimulationRun.cs
+    - path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+      projectPath: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
       originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Simulation\SimulationRun.cs.meta
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\SimulationRun.cs.meta
-      projectPath: Assets\Scripts\Simulation\SimulationRun.cs.meta
-      originalPath: 
-      indexStatus: 1
-      workTreeStatus: 1
-    - path: Assets\Scripts\Simulation\Simulator.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
-      projectPath: Assets\Scripts\Simulation\Simulator.cs
-      originalPath: 
-      indexStatus: 0
+      indexStatus: 3
       workTreeStatus: 3
-    - path: Assets\Scripts\visualization\SimulationVisualiser.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
-      projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
+    - path: Assets\Scripts\Simulation\Creature\CreatureType.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs
+      projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
+      projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+      projectPath: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 3
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
@@ -1393,10 +1431,10 @@ MonoBehaviour:
       workTreeStatus: 3
     changedFilesText: 11 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-02-05T13:49:58.016+01:00
+      updatedTimeString: 2024-07-02T19:13:43.023+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-02-05T14:31:29.278+01:00
+      updatedTimeString: 2024-07-02T19:41:16.717+02:00
       cacheType: 6
     lastLocksChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -1404,991 +1442,31 @@ MonoBehaviour:
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
-    logEntries:
-    - commitID: 2ec9cbc3e0ffa5f176da8c0dce0670b2aeb8ff37
-      mergeA: 
-      mergeB: 
-      authorName: karstro
-      authorEmail: 33285644+karstro@users.noreply.github.com
-      commitEmail: 33285644+karstro@users.noreply.github.com
-      commitName: karstro
-      summary: refactor and comments
-      description: 
-      timeString: 2023-01-25T16:02:50.000+01:00
-      commitTimeString: 2023-01-25T16:02:50.000+01:00
-      changes:
-      - path: Assets\Scripts\visualization\SimulationVisualiser.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
-        projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
-        originalPath: 
-        indexStatus: 3
-        workTreeStatus: 0
-      - path: Assets\Scripts\visualization\TestVisualiser.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\TestVisualiser.cs
-        projectPath: Assets\Scripts\visualization\TestVisualiser.cs
-        originalPath: 
-        indexStatus: 3
-        workTreeStatus: 0
-    - commitID: 98006223d67d81dedfc8646a9e881a39c3460c04
-      mergeA: 
-      mergeB: 
-      authorName: karstro
-      authorEmail: 33285644+karstro@users.noreply.github.com
-      commitEmail: 33285644+karstro@users.noreply.github.com
-      commitName: karstro
-      summary: refactor and comment the visualizer and components
-      description: 
-      timeString: 2023-01-25T16:01:17.000+01:00
-      commitTimeString: 2023-01-25T16:01:17.000+01:00
-      changes:
-      - path: Assets\Scripts\Simulation\State.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\State.cs
-        projectPath: Assets\Scripts\Simulation\State.cs
-        originalPath: 
-        indexStatus: 3
-        workTreeStatus: 0
-      - path: Assets\Scripts\visualization\CreatureModelBuilder.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\CreatureModelBuilder.cs
-        projectPath: Assets\Scripts\visualization\CreatureModelBuilder.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\visualization\CreatureModelBuilder.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\CreatureModelBuilder.cs.meta
-        projectPath: Assets\Scripts\visualization\CreatureModelBuilder.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-    - commitID: a372c8bf6ee0eec221abb123dd2ade1cb2b143b6
-      mergeA: 
-      mergeB: 
-      authorName: karstro
-      authorEmail: 33285644+karstro@users.noreply.github.com
-      commitEmail: 33285644+karstro@users.noreply.github.com
-      commitName: karstro
-      summary: update meta information
-      description: '.gitignore now uses the correct folder structure,
-
-        LICENSE
-        is created with an MIT license
-
-        and README is updated with a description
-        of the project''s intent.'
-      timeString: 2023-01-25T13:17:36.000+01:00
-      commitTimeString: 2023-01-25T13:17:36.000+01:00
-      changes:
-      - path: .gitignore
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\.gitignore
-        projectPath: .gitignore
-        originalPath: 
-        indexStatus: 3
-        workTreeStatus: 0
-      - path: LICENSE
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\LICENSE
-        projectPath: LICENSE
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: README.md
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\README.md
-        projectPath: README.md
-        originalPath: 
-        indexStatus: 3
-        workTreeStatus: 0
-    - commitID: de5a73e7979124f0ec9c65477785210925aa0fcc
-      mergeA: 
-      mergeB: 
-      authorName: karstro
-      authorEmail: 33285644+karstro@users.noreply.github.com
-      commitEmail: 33285644+karstro@users.noreply.github.com
-      commitName: karstro
-      summary: Moving NEATjet to GitHub
-      description: move all files previously created into a github repository.
-      timeString: 2023-01-25T12:43:55.000+01:00
-      commitTimeString: 2023-01-25T12:43:55.000+01:00
-      changes:
-      - path: .vsconfig
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\.vsconfig
-        projectPath: .vsconfig
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scenes.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes.meta
-        projectPath: Assets\Scenes.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scenes\SampleScene.unity
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
-        projectPath: Assets\Scenes\SampleScene.unity
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scenes\SampleScene.unity.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity.meta
-        projectPath: Assets\Scenes\SampleScene.unity.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts.meta
-        projectPath: Assets\Scripts.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\CameraBehavior.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\CameraBehavior.meta
-        projectPath: Assets\Scripts\CameraBehavior.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\CameraBehavior\CameraMover.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\CameraBehavior\CameraMover.cs
-        projectPath: Assets\Scripts\CameraBehavior\CameraMover.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\CameraBehavior\CameraMover.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\CameraBehavior\CameraMover.cs.meta
-        projectPath: Assets\Scripts\CameraBehavior\CameraMover.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Evolution.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution.meta
-        projectPath: Assets\Scripts\Evolution.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Evolution\Generation.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
-        projectPath: Assets\Scripts\Evolution\Generation.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Evolution\Generation.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs.meta
-        projectPath: Assets\Scripts\Evolution\Generation.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\InheritanceTest.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest.meta
-        projectPath: Assets\Scripts\InheritanceTest.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs
-        projectPath: Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs.meta
-        projectPath: Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\InheritanceTest\SecondVisualiser.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\SecondVisualiser.cs
-        projectPath: Assets\Scripts\InheritanceTest\SecondVisualiser.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\InheritanceTest\SecondVisualiser.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\SecondVisualiser.cs.meta
-        projectPath: Assets\Scripts\InheritanceTest\SecondVisualiser.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\InheritanceTest\Visualiser.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\Visualiser.cs
-        projectPath: Assets\Scripts\InheritanceTest\Visualiser.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\InheritanceTest\Visualiser.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\Visualiser.cs.meta
-        projectPath: Assets\Scripts\InheritanceTest\Visualiser.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Simulation.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation.meta
-        projectPath: Assets\Scripts\Simulation.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs
-        projectPath: Assets\Scripts\Simulation\Creature.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs.meta
-        projectPath: Assets\Scripts\Simulation\Creature.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Simulator.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
-        projectPath: Assets\Scripts\Simulation\Simulator.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Simulator.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs.meta
-        projectPath: Assets\Scripts\Simulation\Simulator.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\State.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\State.cs
-        projectPath: Assets\Scripts\Simulation\State.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\State.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\State.cs.meta
-        projectPath: Assets\Scripts\Simulation\State.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\visualization.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization.meta
-        projectPath: Assets\Scripts\visualization.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\visualization\SimulationVisualiser.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
-        projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\visualization\SimulationVisualiser.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs.meta
-        projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\visualization\TestVisualiser.cs
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\TestVisualiser.cs
-        projectPath: Assets\Scripts\visualization\TestVisualiser.cs
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\Scripts\visualization\TestVisualiser.cs.meta
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\TestVisualiser.cs.meta
-        projectPath: Assets\Scripts\visualization\TestVisualiser.cs.meta
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Packages\manifest.json
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Packages\manifest.json
-        projectPath: Packages\manifest.json
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Packages\packages-lock.json
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Packages\packages-lock.json
-        projectPath: Packages\packages-lock.json
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\AudioManager.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\AudioManager.asset
-        projectPath: ProjectSettings\AudioManager.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\ClusterInputManager.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\ClusterInputManager.asset
-        projectPath: ProjectSettings\ClusterInputManager.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\DynamicsManager.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\DynamicsManager.asset
-        projectPath: ProjectSettings\DynamicsManager.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\EditorBuildSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\EditorBuildSettings.asset
-        projectPath: ProjectSettings\EditorBuildSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\EditorSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\EditorSettings.asset
-        projectPath: ProjectSettings\EditorSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\GraphicsSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\GraphicsSettings.asset
-        projectPath: ProjectSettings\GraphicsSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\InputManager.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\InputManager.asset
-        projectPath: ProjectSettings\InputManager.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\MemorySettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\MemorySettings.asset
-        projectPath: ProjectSettings\MemorySettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\NavMeshAreas.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\NavMeshAreas.asset
-        projectPath: ProjectSettings\NavMeshAreas.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\PackageManagerSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\PackageManagerSettings.asset
-        projectPath: ProjectSettings\PackageManagerSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\Physics2DSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\Physics2DSettings.asset
-        projectPath: ProjectSettings\Physics2DSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\PresetManager.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\PresetManager.asset
-        projectPath: ProjectSettings\PresetManager.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\ProjectSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\ProjectSettings.asset
-        projectPath: ProjectSettings\ProjectSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\ProjectVersion.txt
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\ProjectVersion.txt
-        projectPath: ProjectSettings\ProjectVersion.txt
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\QualitySettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\QualitySettings.asset
-        projectPath: ProjectSettings\QualitySettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\SceneTemplateSettings.json
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\SceneTemplateSettings.json
-        projectPath: ProjectSettings\SceneTemplateSettings.json
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\TagManager.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\TagManager.asset
-        projectPath: ProjectSettings\TagManager.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\TimeManager.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\TimeManager.asset
-        projectPath: ProjectSettings\TimeManager.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\UnityConnectSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\UnityConnectSettings.asset
-        projectPath: ProjectSettings\UnityConnectSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\VFXManager.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\VFXManager.asset
-        projectPath: ProjectSettings\VFXManager.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\VersionControlSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\VersionControlSettings.asset
-        projectPath: ProjectSettings\VersionControlSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: ProjectSettings\XRSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\XRSettings.asset
-        projectPath: ProjectSettings\XRSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: README.md
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\README.md
-        projectPath: README.md
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\EditorUserSettings.asset
-        projectPath: UserSettings\EditorUserSettings.asset
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\Layouts\default-2022.dwlt
-        projectPath: UserSettings\Layouts\default-2022.dwlt
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: UserSettings\Search.settings
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\Search.settings
-        projectPath: UserSettings\Search.settings
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-    - commitID: d5f3dc52965cea03d14591416237ddb38c1d6847
-      mergeA: 
-      mergeB: 
-      authorName: karstro
-      authorEmail: 33285644+karstro@users.noreply.github.com
-      commitEmail: 33285644+karstro@users.noreply.github.com
-      commitName: karstro
-      summary: Initial commit
-      description: 
-      timeString: 2023-01-25T12:42:42.000+01:00
-      commitTimeString: 2023-01-25T12:42:42.000+01:00
-      changes:
-      - path: .gitattributes
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\.gitattributes
-        projectPath: .gitattributes
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: .gitignore
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\.gitignore
-        projectPath: .gitignore
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
-      - path: Assets\.gitignore
-        fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\.gitignore
-        projectPath: Assets\.gitignore
-        originalPath: 
-        indexStatus: 4
-        workTreeStatus: 0
+    logEntries: []
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2023-01-25T16:03:11.299+01:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2023-01-25T16:03:11.295+01:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
-      entries:
-      - commitID: 2ec9cbc3e0ffa5f176da8c0dce0670b2aeb8ff37
-        mergeA: 
-        mergeB: 
-        authorName: karstro
-        authorEmail: 33285644+karstro@users.noreply.github.com
-        commitEmail: 33285644+karstro@users.noreply.github.com
-        commitName: karstro
-        summary: refactor and comments
-        description: 
-        timeString: 2023-01-25T16:02:50.000+01:00
-        commitTimeString: 2023-01-25T16:02:50.000+01:00
-        changes:
-        - path: Assets\Scripts\visualization\SimulationVisualiser.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
-          projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-        - path: Assets\Scripts\visualization\TestVisualiser.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\TestVisualiser.cs
-          projectPath: Assets\Scripts\visualization\TestVisualiser.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - commitID: 98006223d67d81dedfc8646a9e881a39c3460c04
-        mergeA: 
-        mergeB: 
-        authorName: karstro
-        authorEmail: 33285644+karstro@users.noreply.github.com
-        commitEmail: 33285644+karstro@users.noreply.github.com
-        commitName: karstro
-        summary: refactor and comment the visualizer and components
-        description: 
-        timeString: 2023-01-25T16:01:17.000+01:00
-        commitTimeString: 2023-01-25T16:01:17.000+01:00
-        changes:
-        - path: Assets\Scripts\Simulation\State.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\State.cs
-          projectPath: Assets\Scripts\Simulation\State.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-        - path: Assets\Scripts\visualization\CreatureModelBuilder.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\CreatureModelBuilder.cs
-          projectPath: Assets\Scripts\visualization\CreatureModelBuilder.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\visualization\CreatureModelBuilder.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\CreatureModelBuilder.cs.meta
-          projectPath: Assets\Scripts\visualization\CreatureModelBuilder.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - commitID: a372c8bf6ee0eec221abb123dd2ade1cb2b143b6
-        mergeA: 
-        mergeB: 
-        authorName: karstro
-        authorEmail: 33285644+karstro@users.noreply.github.com
-        commitEmail: 33285644+karstro@users.noreply.github.com
-        commitName: karstro
-        summary: update meta information
-        description: '.gitignore now uses the correct folder structure,
-
-          LICENSE
-          is created with an MIT license
-
-          and README is updated with a
-          description of the project''s intent.'
-        timeString: 2023-01-25T13:17:36.000+01:00
-        commitTimeString: 2023-01-25T13:17:36.000+01:00
-        changes:
-        - path: .gitignore
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\.gitignore
-          projectPath: .gitignore
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-        - path: LICENSE
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\LICENSE
-          projectPath: LICENSE
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: README.md
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\README.md
-          projectPath: README.md
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - commitID: de5a73e7979124f0ec9c65477785210925aa0fcc
-        mergeA: 
-        mergeB: 
-        authorName: karstro
-        authorEmail: 33285644+karstro@users.noreply.github.com
-        commitEmail: 33285644+karstro@users.noreply.github.com
-        commitName: karstro
-        summary: Moving NEATjet to GitHub
-        description: move all files previously created into a github repository.
-        timeString: 2023-01-25T12:43:55.000+01:00
-        commitTimeString: 2023-01-25T12:43:55.000+01:00
-        changes:
-        - path: .vsconfig
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\.vsconfig
-          projectPath: .vsconfig
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scenes.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes.meta
-          projectPath: Assets\Scenes.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scenes\SampleScene.unity
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
-          projectPath: Assets\Scenes\SampleScene.unity
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scenes\SampleScene.unity.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity.meta
-          projectPath: Assets\Scenes\SampleScene.unity.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts.meta
-          projectPath: Assets\Scripts.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\CameraBehavior.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\CameraBehavior.meta
-          projectPath: Assets\Scripts\CameraBehavior.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\CameraBehavior\CameraMover.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\CameraBehavior\CameraMover.cs
-          projectPath: Assets\Scripts\CameraBehavior\CameraMover.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\CameraBehavior\CameraMover.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\CameraBehavior\CameraMover.cs.meta
-          projectPath: Assets\Scripts\CameraBehavior\CameraMover.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Evolution.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution.meta
-          projectPath: Assets\Scripts\Evolution.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Evolution\Generation.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
-          projectPath: Assets\Scripts\Evolution\Generation.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Evolution\Generation.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs.meta
-          projectPath: Assets\Scripts\Evolution\Generation.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\InheritanceTest.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest.meta
-          projectPath: Assets\Scripts\InheritanceTest.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs
-          projectPath: Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs.meta
-          projectPath: Assets\Scripts\InheritanceTest\InheritanceVisualiser.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\InheritanceTest\SecondVisualiser.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\SecondVisualiser.cs
-          projectPath: Assets\Scripts\InheritanceTest\SecondVisualiser.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\InheritanceTest\SecondVisualiser.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\SecondVisualiser.cs.meta
-          projectPath: Assets\Scripts\InheritanceTest\SecondVisualiser.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\InheritanceTest\Visualiser.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\Visualiser.cs
-          projectPath: Assets\Scripts\InheritanceTest\Visualiser.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\InheritanceTest\Visualiser.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\InheritanceTest\Visualiser.cs.meta
-          projectPath: Assets\Scripts\InheritanceTest\Visualiser.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Simulation.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation.meta
-          projectPath: Assets\Scripts\Simulation.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs
-          projectPath: Assets\Scripts\Simulation\Creature.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature.cs.meta
-          projectPath: Assets\Scripts\Simulation\Creature.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Simulator.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
-          projectPath: Assets\Scripts\Simulation\Simulator.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Simulator.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs.meta
-          projectPath: Assets\Scripts\Simulation\Simulator.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\State.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\State.cs
-          projectPath: Assets\Scripts\Simulation\State.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\State.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\State.cs.meta
-          projectPath: Assets\Scripts\Simulation\State.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\visualization.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization.meta
-          projectPath: Assets\Scripts\visualization.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\visualization\SimulationVisualiser.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
-          projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\visualization\SimulationVisualiser.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs.meta
-          projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\visualization\TestVisualiser.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\TestVisualiser.cs
-          projectPath: Assets\Scripts\visualization\TestVisualiser.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\Scripts\visualization\TestVisualiser.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\TestVisualiser.cs.meta
-          projectPath: Assets\Scripts\visualization\TestVisualiser.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Packages\manifest.json
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Packages\manifest.json
-          projectPath: Packages\manifest.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Packages\packages-lock.json
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Packages\packages-lock.json
-          projectPath: Packages\packages-lock.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\AudioManager.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\AudioManager.asset
-          projectPath: ProjectSettings\AudioManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\ClusterInputManager.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\ClusterInputManager.asset
-          projectPath: ProjectSettings\ClusterInputManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\DynamicsManager.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\DynamicsManager.asset
-          projectPath: ProjectSettings\DynamicsManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\EditorBuildSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\EditorBuildSettings.asset
-          projectPath: ProjectSettings\EditorBuildSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\EditorSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\EditorSettings.asset
-          projectPath: ProjectSettings\EditorSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\GraphicsSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\GraphicsSettings.asset
-          projectPath: ProjectSettings\GraphicsSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\InputManager.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\InputManager.asset
-          projectPath: ProjectSettings\InputManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\MemorySettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\MemorySettings.asset
-          projectPath: ProjectSettings\MemorySettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\NavMeshAreas.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\NavMeshAreas.asset
-          projectPath: ProjectSettings\NavMeshAreas.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\PackageManagerSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\PackageManagerSettings.asset
-          projectPath: ProjectSettings\PackageManagerSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\Physics2DSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\Physics2DSettings.asset
-          projectPath: ProjectSettings\Physics2DSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\PresetManager.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\PresetManager.asset
-          projectPath: ProjectSettings\PresetManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\ProjectSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\ProjectSettings.asset
-          projectPath: ProjectSettings\ProjectSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\ProjectVersion.txt
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\ProjectVersion.txt
-          projectPath: ProjectSettings\ProjectVersion.txt
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\QualitySettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\QualitySettings.asset
-          projectPath: ProjectSettings\QualitySettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\SceneTemplateSettings.json
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\SceneTemplateSettings.json
-          projectPath: ProjectSettings\SceneTemplateSettings.json
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\TagManager.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\TagManager.asset
-          projectPath: ProjectSettings\TagManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\TimeManager.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\TimeManager.asset
-          projectPath: ProjectSettings\TimeManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\UnityConnectSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\UnityConnectSettings.asset
-          projectPath: ProjectSettings\UnityConnectSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\VFXManager.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\VFXManager.asset
-          projectPath: ProjectSettings\VFXManager.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\VersionControlSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\VersionControlSettings.asset
-          projectPath: ProjectSettings\VersionControlSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: ProjectSettings\XRSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\ProjectSettings\XRSettings.asset
-          projectPath: ProjectSettings\XRSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: README.md
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\README.md
-          projectPath: README.md
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: UserSettings\Search.settings
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\Search.settings
-          projectPath: UserSettings\Search.settings
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - commitID: d5f3dc52965cea03d14591416237ddb38c1d6847
-        mergeA: 
-        mergeB: 
-        authorName: karstro
-        authorEmail: 33285644+karstro@users.noreply.github.com
-        commitEmail: 33285644+karstro@users.noreply.github.com
-        commitName: karstro
-        summary: Initial commit
-        description: 
-        timeString: 2023-01-25T12:42:42.000+01:00
-        commitTimeString: 2023-01-25T12:42:42.000+01:00
-        changes:
-        - path: .gitattributes
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\.gitattributes
-          projectPath: .gitattributes
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: .gitignore
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\.gitignore
-          projectPath: .gitignore
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-        - path: Assets\.gitignore
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\.gitignore
-          projectPath: Assets\.gitignore
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
+      entries: []
       statusAhead: 0
-      selectedIndex: 0
+      selectedIndex: -1
     selectedEntry:
-      commitID: 2ec9cbc3e0ffa5f176da8c0dce0670b2aeb8ff37
+      commitID: 
       mergeA: 
       mergeB: 
-      authorName: karstro
-      authorEmail: 33285644+karstro@users.noreply.github.com
-      commitEmail: 33285644+karstro@users.noreply.github.com
-      commitName: karstro
-      summary: refactor and comments
+      authorName: 
+      authorEmail: 
+      commitEmail: 
+      commitName: 
+      summary: 
       description: 
-      timeString: 2023-01-25T16:02:50.000+01:00
-      commitTimeString: 2023-01-25T16:02:50.000+01:00
+      timeString: 0001-01-01T00:00:00.000+00:00
+      commitTimeString: 0001-01-01T00:00:00.000+00:00
       changes:
       - path: Assets\Scripts\visualization\SimulationVisualiser.cs
         fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
@@ -2614,7 +1692,7 @@ MonoBehaviour:
       changingManually: 1
     hasRemote: 1
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-01-25T16:03:10.632+01:00
+      updatedTimeString: 2023-06-18T14:41:27.564+02:00
       cacheType: 1
     newRepositoryRemoteUrl: https://github.com/karstro/NEATjet
     repositoryRemoteName: origin
@@ -2622,12 +1700,12 @@ MonoBehaviour:
     scroll: {x: 0, y: 0}
     userSettingsView:
       gitName: karstro
-      gitEmail: 33285644+karstro@users.noreply.github.com
+      gitEmail: karst@makajelaan.nl
       newGitName: karstro
-      newGitEmail: 33285644+karstro@users.noreply.github.com
+      newGitEmail: karst@makajelaan.nl
       needsSaving: 0
       lastCheckUserChangedEvent:
-        updatedTimeString: 0001-01-01T00:00:00.000+00:00
+        updatedTimeString: 2023-06-18T15:24:26.687+02:00
         cacheType: 8
     webTimeout: 100000
     gitTimeout: 5000
@@ -2656,16 +1734,148 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Jan 0001, 01:00
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2023-01-25T16:03:10.632+01:00
+      updatedTimeString: 2023-05-27T10:07:31.778+02:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2023-01-25T16:02:56.432+01:00
+      updatedTimeString: 2023-05-27T10:09:58.558+02:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-01-25T16:02:56.924+01:00
+      updatedTimeString: 2023-05-27T10:09:58.459+02:00
       cacheType: 6
     lockedFiles: []
-    gitStatusEntries: []
+    gitStatusEntries:
+    - path: Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Brain\StaticBrain.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Brain\StaticBrain.cs
+      projectPath: Assets\Scripts\Brain\StaticBrain.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\ConfigurableJointExtensions.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\ConfigurableJointExtensions.cs
+      projectPath: Assets\Scripts\ConfigurableJointExtensions.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\ConfigurableJointExtensions.cs.meta
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\ConfigurableJointExtensions.cs.meta
+      projectPath: Assets\Scripts\ConfigurableJointExtensions.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Evolution\Generation.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\Generation.cs
+      projectPath: Assets\Scripts\Evolution\Generation.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\SetTargetRotation.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\SetTargetRotation.cs
+      projectPath: Assets\Scripts\SetTargetRotation.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\SetTargetRotation.cs.meta
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\SetTargetRotation.cs.meta
+      projectPath: Assets\Scripts\SetTargetRotation.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\Simulation\Creature\Creature.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\Creature.cs
+      projectPath: Assets\Scripts\Simulation\Creature\Creature.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\Creature\CreatureBase.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureBase.cs
+      projectPath: Assets\Scripts\Simulation\Creature\CreatureBase.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+      projectPath: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+      projectPath: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+      projectPath: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\Simulator.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Simulator.cs
+      projectPath: Assets\Scripts\Simulation\Simulator.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\Storage\SimulationRun.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Storage\SimulationRun.cs
+      projectPath: Assets\Scripts\Simulation\Storage\SimulationRun.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Simulation\Storage\State.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Storage\State.cs
+      projectPath: Assets\Scripts\Simulation\Storage\State.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\TestGen.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\TestGen.cs
+      projectPath: Assets\Scripts\TestGen.cs
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\TestGen.cs.meta
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\TestGen.cs.meta
+      projectPath: Assets\Scripts\TestGen.cs.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scripts\visualization\CreatureModel.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\CreatureModel.cs
+      projectPath: Assets\Scripts\visualization\CreatureModel.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\visualization\CreatureModelBuilder.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\CreatureModelBuilder.cs
+      projectPath: Assets\Scripts\visualization\CreatureModelBuilder.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\visualization\SimulationVisualiser.cs
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\visualization\SimulationVisualiser.cs
+      projectPath: Assets\Scripts\visualization\SimulationVisualiser.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\Layouts\default-2022.dwlt
+      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\Layouts\default-2022.dwlt
+      projectPath: UserSettings\Layouts\default-2022.dwlt
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -2692,13 +1902,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-02-05T13:49:58.016+01:00
+    updatedTimeString: 2023-06-18T15:43:49.375+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-02-05T14:31:29.335+01:00
+    updatedTimeString: 2023-06-18T15:01:35.608+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-02-05T14:31:29.278+01:00
+    updatedTimeString: 2023-06-18T15:39:59.043+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2769,10 +1979,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 718
-    width: 1531
-    height: 401
+    x: 8
+    y: 681
+    width: 1517
+    height: 430
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2790,22 +2000,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Simulation
+    - Assets/Scripts/Simulation/Creature
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Simulation
+  - Assets/Scripts/Simulation/Creature
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d84e0000
-    m_LastClickedID: 20184
-    m_ExpandedIDs: 00000000744e0000764e0000aa4e0000ae4e000000ca9a3bffffff7f
+    m_SelectedIDs: be4e0000
+    m_LastClickedID: 20158
+    m_ExpandedIDs: 000000008c4e00008e4e0000904e0000a24e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2833,7 +2043,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000744e0000764e0000
+    m_ExpandedIDs: 000000008c4e00008e4e0000904e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2860,7 +2070,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2909,10 +2119,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1532
-    y: 73
-    width: 387
-    height: 1046
+    x: 1526
+    y: 81
+    width: 384
+    height: 1030
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2950,10 +2160,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 73
-    width: 378
-    height: 624
+    x: 8
+    y: 81
+    width: 375
+    height: 579
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2963,7 +2173,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 36fbffff
+      m_ExpandedIDs: 9c7cffff9285ffffda8bffff7495ffffd09fffff74a6ffff3cacffff86b1ffff84baffff1ec1fffffec3ffffd4c6ffff54c9ffff26d0ffffaad8ffff6aefffff34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -3007,10 +2217,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 379
-    y: 73
-    width: 1151
-    height: 624
+    x: 384
+    y: 81
+    width: 1140
+    height: 579
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3245,9 +2455,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.2741246, y: 2.6832023, z: -0.47445154}
+    m_Target: {x: 0.22911018, y: -0.019644022, z: -0.92248976}
     speed: 2
-    m_Value: {x: 2.2741246, y: 2.6832023, z: -0.47445154}
+    m_Value: {x: 0.22911018, y: -0.019644022, z: -0.92248976}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -3293,20 +2503,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.02158216, y: -0.9678898, z: 0.08911114, w: 0.23440449}
+    m_Target: {x: -0.07779894, y: 0.8474793, z: -0.10725256, w: -0.51656646}
     speed: 2
-    m_Value: {x: 0.021580406, y: -0.9678111, z: 0.0891039, w: 0.23438543}
+    m_Value: {x: -0.07769731, y: 0.8463722, z: -0.107112445, w: -0.5158916}
   m_Size:
-    m_Target: 4.866915
+    m_Target: 1.8648044
     speed: 2
-    m_Value: 4.866915
+    m_Value: 1.8648044
   m_Ortho:
     m_Target: 1
     speed: 2
     m_Value: 1
   m_CameraSettings:
-    m_Speed: 1.0846
-    m_SpeedNormalized: 0.53999996
+    m_Speed: 1.0249
+    m_SpeedNormalized: 0.51
     m_SpeedMin: 0.01
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -3344,10 +2554,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 379
-    y: 73
-    width: 1151
-    height: 624
+    x: 384
+    y: 81
+    width: 1140
+    height: 579
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3358,7 +2568,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1151, y: 603}
+  m_TargetSize: {x: 1140, y: 558}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -3378,10 +2588,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -575.5
-    m_HBaseRangeMax: 575.5
-    m_VBaseRangeMin: -301.5
-    m_VBaseRangeMax: 301.5
+    m_HBaseRangeMin: -570
+    m_HBaseRangeMax: 570
+    m_VBaseRangeMin: -279
+    m_VBaseRangeMax: 279
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -3399,23 +2609,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1151
-      height: 603
+      width: 1140
+      height: 558
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 575.5, y: 301.5}
+    m_Translation: {x: 570, y: 279}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -575.5
-      y: -301.5
-      width: 1151
-      height: 603
+      x: -570
+      y: -279
+      width: 1140
+      height: 558
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1151, y: 624}
+  m_LastWindowPixelSize: {x: 1140, y: 579}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -3443,10 +2653,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 718
-    width: 1531
-    height: 401
+    x: 8
+    y: 681
+    width: 1517
+    height: 430
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
