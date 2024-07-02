@@ -1,34 +1,39 @@
+using NeatJet.Scripts.Simulation.Creatures;
+
 using UnityEngine;
 
-public class RandomBrain : IBrain
+namespace NeatJet.Scripts.Brain
 {
-    private readonly Vector3[] JetAngles;
-    private readonly float[] Thrusts;
-
-    public RandomBrain(int jets)
+    public class RandomBrain : IBrain
     {
-        JetAngles = new Vector3[jets];
-        Thrusts = new float[jets];
-    }
+        private readonly Vector3[] JetAngles;
+        private readonly float[] Thrusts;
 
-    public (Vector3[], float[]) GetIntent(float time, Creature creature)
-    {
-        for (var JetIndex = 0; JetIndex < creature.Jets; JetIndex++)
+        public RandomBrain(int jets)
         {
-            JetAngles[JetIndex] = RandomVector();
-            Thrusts[JetIndex] = Random.Range(-1f, 1f);
+            JetAngles = new Vector3[jets];
+            Thrusts = new float[jets];
         }
 
-        return (JetAngles, Thrusts);
-    }
+        public (Vector3[], float[]) GetIntent(float time, Creature creature)
+        {
+            for (var JetIndex = 0; JetIndex < creature.Jets; JetIndex++)
+            {
+                JetAngles[JetIndex] = RandomVector();
+                Thrusts[JetIndex] = Random.Range(-1f, 1f);
+            }
 
-    private Vector3 RandomVector()
-    {
-        Vector3 randomVector = new(
-            Random.Range(-1f, 1f),
-            Random.Range(-1f, 1f),
-            Random.Range(-1f, 1f)
-        );
-        return randomVector.normalized;
+            return (JetAngles, Thrusts);
+        }
+
+        private Vector3 RandomVector()
+        {
+            Vector3 randomVector = new(
+                Random.Range(-1f, 1f),
+                Random.Range(-1f, 1f),
+                Random.Range(-1f, 1f)
+            );
+            return randomVector.normalized;
+        }
     }
 }

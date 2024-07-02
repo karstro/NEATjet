@@ -1,55 +1,61 @@
-﻿using UnityEngine;
+﻿using NeatJet.Scripts.Simulation.Storage;
+using NeatJet.Scripts.Visualization;
 
-public class Generation : MonoBehaviour
+using UnityEngine;
+
+namespace NeatJet.Scripts.Simulation.Creatures
 {
-    public int GenerationSize = 1;
-
-    private Creature[] Creatures;
-    private Simulator Sim;
-    private SimulationRun[] Runs;
-    private SimulationVisualiser Visualiser;
-
-    // Start is called before the first frame update
-    void Start()
+    public class Generation : MonoBehaviour
     {
-        Sim = new Simulator(60, 15);
+        public int GenerationSize = 1;
 
-        GenerateCreatures();
-        Runs = Sim.SimulateCreatures(Creatures);
-        DestroyCreatures();
+        private Creature[] Creatures;
+        private Simulator Sim;
+        private SimulationRun[] Runs;
+        private SimulationVisualiser Visualiser;
 
-        BeginCreatureVisualisation();
-    }
-
-    void GenerateCreatures()
-    {
-        Creatures = new Creature[GenerationSize];
-        for (var i = 0; i < GenerationSize; i++)
+        // Start is called before the first frame update
+        void Start()
         {
-            Creatures[i] = new(CreatureType.ConfigurableJointCreature);
-        }
-    }
+            Sim = new Simulator(60, 15);
 
-    void DestroyCreatures()
-    {
-        for (var i = 0; i < GenerationSize; i++)
+            GenerateCreatures();
+            Runs = Sim.SimulateCreatures(Creatures);
+            DestroyCreatures();
+
+            BeginCreatureVisualisation();
+        }
+
+        void GenerateCreatures()
         {
-            Creatures[i].Destroy();
+            Creatures = new Creature[GenerationSize];
+            for (var i = 0; i < GenerationSize; i++)
+            {
+                Creatures[i] = new(CreatureType.ConfigurableJointCreature);
+            }
         }
-    }
 
-    void BeginCreatureVisualisation()
-    {
-        Visualiser = new(Runs);
-    }
+        void DestroyCreatures()
+        {
+            for (var i = 0; i < GenerationSize; i++)
+            {
+                Creatures[i].Destroy();
+            }
+        }
 
-    void Update()
-    {
-        Visualiser?.Update();
-    }
+        void BeginCreatureVisualisation()
+        {
+            Visualiser = new(Runs);
+        }
 
-    void OnGUI()
-    {
-        Visualiser?.OnGUI();
+        void Update()
+        {
+            Visualiser?.Update();
+        }
+
+        void OnGUI()
+        {
+            Visualiser?.OnGUI();
+        }
     }
 }
