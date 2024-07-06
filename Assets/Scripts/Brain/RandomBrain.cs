@@ -1,23 +1,26 @@
 using NeatJet.Scripts.Simulation.Creatures;
+using NeatJet.Scripts.Simulation.Creatures.Genes;
 
 using UnityEngine;
 
 namespace NeatJet.Scripts.Brain
 {
-    public class RandomBrain : IBrain
+    public class RandomBrain : MonoBehaviour, IBrain
     {
-        private readonly Vector3[] JetAngles;
-        private readonly float[] Thrusts;
+        private Vector3[] JetAngles;
+        private float[] Thrusts;
 
-        public RandomBrain(int jets)
+        public static RandomBrain Add(GameObject gameObject, Gene gene)
         {
-            JetAngles = new Vector3[jets];
-            Thrusts = new float[jets];
+            var brain = gameObject.AddComponent<RandomBrain>();
+            brain.JetAngles = new Vector3[gene.Jets];
+            brain.Thrusts = new float[gene.Jets];
+            return brain;
         }
 
-        public (Vector3[], float[]) GetIntent(float time, Creature creature)
+        public (Vector3[], float[]) GetIntent(float time, JetCreature creature)
         {
-            for (var JetIndex = 0; JetIndex < creature.Jets; JetIndex++)
+            for (var JetIndex = 0; JetIndex < creature.JetNumber; JetIndex++)
             {
                 JetAngles[JetIndex] = RandomVector();
                 Thrusts[JetIndex] = Random.Range(-1f, 1f);

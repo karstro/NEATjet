@@ -326,8 +326,8 @@ GameObject:
   - component: {fileID: 1503233995}
   - component: {fileID: 1503233994}
   - component: {fileID: 1503233993}
-  - component: {fileID: 1503234002}
-  - component: {fileID: 1503234003}
+  - component: {fileID: 1503234005}
+  - component: {fileID: 1503234006}
   m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
@@ -414,20 +414,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1503234002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1503233992}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad71bf57223418a4194b4b5ab94153bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GenerationSize: 1
---- !u!114 &1503234003
+--- !u!114 &1503234005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,10 +423,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1503233992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f813690f6c54d64895fe729e877bb79, type: 3}
+  m_Script: {fileID: 11500000, guid: 1df7dbe2d1dec5642ac673240ced4d00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CreatureType: 2
+  GenerationSize: 100
+  StepsPerSecond: 60
+  TimeOut: 15
+--- !u!114 &1503234006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503233992}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3bc2354e31d2ef4bbda546ee2c9856a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amount: 0
 --- !u!850595691 &1580216002
 LightingSettings:
   m_ObjectHideFlags: 0

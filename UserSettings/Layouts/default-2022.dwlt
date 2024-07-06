@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 9
-    y: 51
-    width: 1903
-    height: 1101
+    x: 0
+    y: 43
+    width: 1920
+    height: 1117
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,8 +43,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 1903
-    height: 1051
+    width: 1920
+    height: 1067
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
@@ -64,10 +64,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1518
+    x: 1532
     y: 0
-    width: 385
-    height: 1051
+    width: 388
+    height: 1067
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -93,8 +93,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 376
-    height: 600
+    width: 379
+    height: 609
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
@@ -118,9 +118,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 600
-    width: 1518
-    height: 451
+    y: 609
+    width: 1532
+    height: 458
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 14}
@@ -149,8 +149,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1903
-    height: 1101
+    width: 1920
+    height: 1117
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -174,7 +174,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1903
+    width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -195,8 +195,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1081
-    width: 1903
+    y: 1097
+    width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -219,8 +219,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1518
-    height: 1051
+    width: 1532
+    height: 1067
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
@@ -244,8 +244,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1518
-    height: 600
+    width: 1532
+    height: 609
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
@@ -265,10 +265,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 376
+    x: 379
     y: 0
-    width: 1142
-    height: 600
+    width: 1153
+    height: 609
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -298,10 +298,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1526
-    y: 81
-    width: 384
-    height: 1030
+    x: 1532
+    y: 73
+    width: 387
+    height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -309,9 +309,9 @@ MonoBehaviour:
   progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 1
-  currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 0
+  currentBranchAndRemoteHasUpdate: 0
+  currentTrackingStatusHasUpdate: 1
+  currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 1
   changeTab: 3
@@ -494,467 +494,11 @@ MonoBehaviour:
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - efeb2facb410206458e4a18f3a9e8f8a
-        - 9fc0d4010bbf28b4594072e72b8655ab
-        - c77360c67b8d6de41b32a71e8394edb0
-        - 815daa00402173a4c8d653aa42a96423
-        - 0f813690f6c54d64895fe729e877bb79
-        - a77a6941648385440a81143c27389aaf
-        - 2aafcfe0e861bf14daec1dbb8f15b45c
-        - 53dd9bdcd11635e43b8f2ffde28f701c
-        - 6cc392befa848d64d9da5962b940cc05
-        - 295df38e8ebc36d4eb959dabd3afa601
-        - 680d50af4d1152d4ea74d6bceac4b60b
-        - 9a898df410d417b4b867ce021ae23991
-        - 729442aac3cc5864bb2d8d4844a00124
-        - ed3b6f845bf90c94395cac15cbbd50c5
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\SampleScene.unity
-          label: SampleScene.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\SampleScene.unity
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
-            projectPath: Assets\Scenes\SampleScene.unity
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Evolution
-          label: Evolution
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Evolution\TestGen.cs
-          label: TestGen.cs
-          level: 3
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Evolution\TestGen.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\TestGen.cs
-            projectPath: Assets\Scripts\Evolution\TestGen.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation
-          label: Simulation
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature
-          label: Creature
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature\ColliderCreature
-          label: ColliderCreature
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-          label: ColliderCreatureBuilder.cs
-          level: 5
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-            projectPath: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 3
-        - path: Assets\Scripts\Simulation\Creature\Creature.cs
-          label: Creature.cs
-          level: 4
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Creature\Creature.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\Creature.cs
-            projectPath: Assets\Scripts\Simulation\Creature\Creature.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-          label: CreatureBuilder.cs
-          level: 4
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-            projectPath: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 3
-        - path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-          label: CreatureDirector.cs
-          level: 4
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-            projectPath: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 3
-        - path: Assets\Scripts\Simulation\Creature\CreatureType.cs
-          label: CreatureType.cs
-          level: 4
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Creature\CreatureType.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs
-            projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-          label: ICreatureBuilder.cs
-          level: 4
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-            fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-            projectPath: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 3
+        keys: []
+        values: []
       folders:
-        keys:
-        - Assets
-        - Assets\Scenes
-        - Assets\Scripts
-        - Assets\Scripts\Evolution
-        - Assets\Scripts\Simulation
-        - Assets\Scripts\Simulation\Creature
-        - Assets\Scripts\Simulation\Creature\ColliderCreature
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Evolution
-          label: Evolution
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation
-          label: Simulation
-          level: 2
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature
-          label: Creature
-          level: 3
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\Simulation\Creature\ColliderCreature
-          label: ColliderCreature
-          level: 4
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -983,366 +527,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\SampleScene.unity
-        label: SampleScene.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\SampleScene.unity
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
-          projectPath: Assets\Scenes\SampleScene.unity
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Evolution
-        label: Evolution
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Evolution\TestGen.cs
-        label: TestGen.cs
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Evolution\TestGen.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\TestGen.cs
-          projectPath: Assets\Scripts\Evolution\TestGen.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\Scripts\Simulation
-        label: Simulation
-        level: 2
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature
-        label: Creature
-        level: 3
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature\ColliderCreature
-        label: ColliderCreature
-        level: 4
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-        label: ColliderCreatureBuilder.cs
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-          projectPath: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 3
-      - path: Assets\Scripts\Simulation\Creature\Creature.cs
-        label: Creature.cs
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Creature\Creature.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\Creature.cs
-          projectPath: Assets\Scripts\Simulation\Creature\Creature.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-        label: CreatureBuilder.cs
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-          projectPath: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 3
-      - path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-        label: CreatureDirector.cs
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-          projectPath: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 3
-      - path: Assets\Scripts\Simulation\Creature\CreatureType.cs
-        label: CreatureType.cs
-        level: 4
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Creature\CreatureType.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs
-          projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
-        label: CreatureType.cs.meta
-        level: 5
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
-          projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-        label: ICreatureBuilder.cs
-        level: 4
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-          projectPath: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 3
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-2022.dwlt
-        label: default-2022.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-2022.dwlt
-          fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\Layouts\default-2022.dwlt
-          projectPath: UserSettings\Layouts\default-2022.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       selectedNode:
         path: 
         label: 
@@ -1362,82 +546,16 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: Assets\Scenes\SampleScene.unity
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scenes\SampleScene.unity
-      projectPath: Assets\Scenes\SampleScene.unity
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Scripts\Evolution\TestGen.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Evolution\TestGen.cs
-      projectPath: Assets\Scripts\Evolution\TestGen.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-      projectPath: Assets\Scripts\Simulation\Creature\ColliderCreature\ColliderCreatureBuilder.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 3
-    - path: Assets\Scripts\Simulation\Creature\Creature.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\Creature.cs
-      projectPath: Assets\Scripts\Simulation\Creature\Creature.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-      projectPath: Assets\Scripts\Simulation\Creature\CreatureBuilder.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 3
-    - path: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-      projectPath: Assets\Scripts\Simulation\Creature\CreatureDirector.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 3
-    - path: Assets\Scripts\Simulation\Creature\CreatureType.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs
-      projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
-      projectPath: Assets\Scripts\Simulation\Creature\CreatureType.cs.meta
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-      projectPath: Assets\Scripts\Simulation\Creature\ICreatureBuilder.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 3
-    - path: UserSettings\EditorUserSettings.asset
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\EditorUserSettings.asset
-      projectPath: UserSettings\EditorUserSettings.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Layouts\default-2022.dwlt
-      fullPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet\UserSettings\Layouts\default-2022.dwlt
-      projectPath: UserSettings\Layouts\default-2022.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    changedFilesText: 11 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2024-07-02T21:14:36.316+02:00
+      updatedTimeString: 2024-07-05T13:42:38.564+02:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2024-07-02T21:15:29.251+02:00
+      updatedTimeString: 2024-07-05T13:42:44.906+02:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2024-07-02T21:14:39.499+02:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -1891,7 +1009,7 @@ MonoBehaviour:
   currentRemoteUrl: https://github.com/karstro/NEATjet
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
     m_Text: main
@@ -1905,10 +1023,10 @@ MonoBehaviour:
     updatedTimeString: 2023-06-18T15:43:49.375+02:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-06-18T15:01:35.608+02:00
+    updatedTimeString: 2024-07-02T21:26:35.787+02:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-06-18T15:39:59.043+02:00
+    updatedTimeString: 2024-07-02T21:26:35.746+02:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -1926,7 +1044,7 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0
+  repositoryProgressValue: 0.9989224
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
@@ -1979,10 +1097,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 9
-    y: 681
-    width: 1517
-    height: 430
+    x: 0
+    y: 682
+    width: 1531
+    height: 437
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2000,22 +1118,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/CameraBehavior
+    - Assets/Scripts/Evolution
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/CameraBehavior
+  - Assets/Scripts/Evolution
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Karst\Desktop\Unityprojects\NEATjet
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b44e0000
-    m_LastClickedID: 20148
-    m_ExpandedIDs: 00000000624e0000644e0000664e0000684e000000ca9a3bffffff7f
+    m_SelectedIDs: b84e0000
+    m_LastClickedID: 20152
+    m_ExpandedIDs: 00000000a24e0000a44e0000a64e0000a84e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2043,7 +1161,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000624e0000644e0000664e0000684e0000
+    m_ExpandedIDs: 00000000a24e0000a44e0000a64e0000a84e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2070,7 +1188,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2119,10 +1237,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1527
-    y: 81
-    width: 384
-    height: 1030
+    x: 1532
+    y: 73
+    width: 387
+    height: 1046
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2160,10 +1278,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 9
-    y: 81
-    width: 375
-    height: 579
+    x: 0
+    y: 73
+    width: 378
+    height: 588
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2171,9 +1289,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6a4f0000
-      m_LastClickedID: 20330
-      m_ExpandedIDs: d0eeffff34fbffff6a4f0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 34fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2217,10 +1335,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 385
-    y: 81
-    width: 1140
-    height: 579
+    x: 379
+    y: 73
+    width: 1151
+    height: 588
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2455,9 +1573,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.13123411, y: 1.8827031, z: 0.7234758}
+    m_Target: {x: -0.073815405, y: 1.4821074, z: 0.6887802}
     speed: 2
-    m_Value: {x: 0.13123411, y: 1.8827031, z: 0.7234758}
+    m_Value: {x: -0.073815405, y: 1.4821074, z: 0.6887802}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2503,13 +1621,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0921788, y: -0.188488, z: 0.030411841, w: -0.978627}
+    m_Target: {x: -0.00025462962, y: 0.98543704, z: -0.10784375, w: 0.14141257}
     speed: 2
-    m_Value: {x: -0.09059062, y: -0.18828337, z: 0.030087631, w: -0.97746485}
+    m_Value: {x: -0.00025428477, y: 0.9841025, z: -0.107697695, w: 0.14122106}
   m_Size:
-    m_Target: 5.6240635
+    m_Target: 4.291283
     speed: 2
-    m_Value: 5.6240635
+    m_Value: 4.291283
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2554,10 +1672,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 385
-    y: 81
-    width: 1140
-    height: 579
+    x: 379
+    y: 73
+    width: 1151
+    height: 588
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2568,7 +1686,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1140, y: 558}
+  m_TargetSize: {x: 1151, y: 567}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -2588,10 +1706,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -570
-    m_HBaseRangeMax: 570
-    m_VBaseRangeMin: -279
-    m_VBaseRangeMax: 279
+    m_HBaseRangeMin: -575.5
+    m_HBaseRangeMax: 575.5
+    m_VBaseRangeMin: -283.5
+    m_VBaseRangeMax: 283.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -2609,23 +1727,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1140
-      height: 558
+      width: 1151
+      height: 567
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 570, y: 279}
+    m_Translation: {x: 575.5, y: 283.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -570
-      y: -279
-      width: 1140
-      height: 558
+      x: -575.5
+      y: -283.5
+      width: 1151
+      height: 567
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1140, y: 579}
+  m_LastWindowPixelSize: {x: 1151, y: 588}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2653,10 +1771,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 9
-    y: 681
-    width: 1517
-    height: 430
+    x: 0
+    y: 682
+    width: 1531
+    height: 437
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

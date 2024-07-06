@@ -15,82 +15,57 @@ namespace NeatJet.Scripts.Simulation.Storage
 
         private int NumStates;
         private readonly State[] States;
-        private bool Finished;
 
-        public float MaximumTime { get; private set; }
+        public float MaximumTime { get => States[^1].Time; }
         public readonly int MaxStates;
 
         // Initialize empty SimulationRun, to be filled by a simulation
-        public SimulationRun(Creature creature, int maxStates)
+        public SimulationRun(JetCreature creature, int maxStates)
         {
             Radius = creature.Radius;
-            Jets = creature.Jets;
-            JetArm = creature.JetArm;
-            JetLength = creature.JetLength;
-            JetRadius = creature.JetRadius;
+            Jets = creature.JetNumber;
+
+            var firstJet = creature.Jets[0];
+            JetArm = firstJet.Arm;
+            JetLength = firstJet.Length;
+            JetRadius = firstJet.Radius;
 
             MaxStates = maxStates;
             NumStates = 0;
             States = new State[MaxStates];
-
-            Finished = false;
         }
 
         // Initialize SimulationRun from an existing list of states.
-        public SimulationRun(Creature creature, State[] states)
+        public SimulationRun(JetCreature creature, State[] states)
         {
             Radius = creature.Radius;
-            Jets = creature.Jets;
-            JetArm = creature.JetArm;
-            JetLength = creature.JetLength;
-            JetRadius = creature.JetRadius;
+            Jets = creature.JetNumber;
+
+            var firstJet = creature.Jets[0];
+            JetArm = firstJet.Arm;
+            JetLength = firstJet.Length;
+            JetRadius = firstJet.Radius;
 
             MaxStates = states.Length;
             NumStates = states.Length;
             States = states;
-
-            Finished = true;
         }
 
         public void AddState(State state)
         {
-            if (Finished || NumStates >= MaxStates)
-            {
-                Debug.Log("Tried to add state when SimulationRun is already Finished.");
-                return;
-            }
-
             States[NumStates] = state;
             NumStates++;
-        }
-
-        public void Finish()
-        {
-            if (Finished)
-            {
-                Debug.Log("Tried to Finish an already Finished SimulationRun.");
-            }
-
-            if (NumStates < MaxStates)
-            {
-                Debug.LogError("Tried to Finish SimulationRun while not full, only " + NumStates + "/" + MaxStates + " States.");
-                return;
-            }
-
-            Finished = true;
-            var lastState = States[MaxStates - 1];
-            MaximumTime = lastState.time;
         }
 
         public State GetStateAtExactTime(float time)
         {
             // find where time is within the States array
-            var BeforeStateIndex = FindStateBeforeTime(time);
+            var beforeStateIndex = FindStateBeforeTime(time);
 
             // linearly interpolate between the two states around the result using time as the fraction.
-            var Before = States[BeforeStateIndex];
-            var After = States[BeforeStateIndex + 1];
-            return State.LerpByTime(Before, After, time);
+            var before = States[beforeStateIndex];
+            var after = States[beforeStateIndex + 1];
+            return State.LerpByTime(before, after, time);
         }
 
         // Find the index of the state before the current time
@@ -102,16 +77,16 @@ namespace NeatJet.Scripts.Simulation.Storage
             var result = 0;
 
             // if the target time is out of bounds, clamp it within bounds
-            time = Mathf.Clamp(time, States[low].time, States[high + 1].time);
+            time = Mathf.Clamp(time, States[low].Time, States[high + 1].Time);
 
             // keep count of iterations in case of endless looping
             var i = 0;
-            var MaxSearchIterations = 100;
+            var maxSearchIterations = 100;
             // while the search hasn't converged
             while (true)
             {
                 // check if search has gone on too long
-                if (i > MaxSearchIterations)
+                if (i > maxSearchIterations)
                 {
                     Debug.Log("Could not find time " + time + " in States array.");
                     break;
@@ -123,12 +98,12 @@ namespace NeatJet.Scripts.Simulation.Storage
                 var mid = (low + high) / 2;
 
                 // check where the wanted time is relative to the middle of the range
-                if (time < States[mid].time)
+                if (time < States[mid].Time)
                 {
                     // if time is below the middle range, restrict the search range to the lower half
                     high = mid - 1;
                 }
-                else if (time > States[mid + 1].time)
+                else if (time > States[mid + 1].Time)
                 {
                     // if time is above the middle range, restrict the search range to the upper half
                     low = mid + 1;

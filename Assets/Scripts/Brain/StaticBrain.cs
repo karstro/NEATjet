@@ -1,21 +1,22 @@
 using NeatJet.Scripts.Simulation.Creatures;
+using NeatJet.Scripts.Simulation.Creatures.Genes;
 
 using UnityEngine;
 
 namespace NeatJet.Scripts.Brain
 {
-    public class StaticBrain : IBrain
+    public class StaticBrain : MonoBehaviour, IBrain
     {
-        private readonly Vector3[] JetDirections;
-        private readonly float[] Thrusts;
+        private Vector3[] JetDirections { get; set; }
+        private float[] Thrusts { get; set; }
 
-        public StaticBrain(Vector3[] jetDirections, float[] thrusts)
+        public static void Add(GameObject creatureObject, Gene gene)
         {
-            JetDirections = jetDirections;
-            Thrusts = thrusts;
+            var brain = creatureObject.AddComponent<StaticBrain>();
+            brain.SetDirectionsFromJets(gene.Jets);
         }
 
-        public StaticBrain(int jets)
+        private void SetDirectionsFromJets(int jets)
         {
             JetDirections = new Vector3[jets];
             Thrusts = new float[jets];
@@ -38,7 +39,7 @@ namespace NeatJet.Scripts.Brain
             }
         }
 
-        public (Vector3[], float[]) GetIntent(float time, Creature c)
+        public (Vector3[], float[]) GetIntent(float time, JetCreature c)
         {
             return (JetDirections, Thrusts);
         }
